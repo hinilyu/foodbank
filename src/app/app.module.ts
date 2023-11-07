@@ -6,7 +6,6 @@ import { AppComponent } from './app.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { HomeComponent } from './pages/home/home.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatIconModule } from '@angular/material/icon';
 import { MatMenuModule } from '@angular/material/menu';
@@ -16,6 +15,9 @@ import { FaqComponent } from './pages/faq/faq.component';
 import { NeedhelpHomeComponent } from './features/needhelp/needhelp-home/needhelp-home.component';
 import { CanhelpHomeComponent } from './features/canhelp/canhelp-home/canhelp-home.component';
 import { StaffHomeComponent } from './features/staff/staff-home/staff-home.component';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatCardModule } from '@angular/material/card';
+import { LoginIvanComponent } from './login-ivan/login-ivan.component';
 
 @NgModule({
   declarations: [
@@ -28,6 +30,7 @@ import { StaffHomeComponent } from './features/staff/staff-home/staff-home.compo
     NeedhelpHomeComponent,
     CanhelpHomeComponent,
     StaffHomeComponent,
+    LoginIvanComponent
   ],
   imports: [
     BrowserModule,
@@ -36,6 +39,12 @@ import { StaffHomeComponent } from './features/staff/staff-home/staff-home.compo
     MatToolbarModule,
     MatIconModule,
     MatMenuModule,
+    MatFormFieldModule,
+    MatCardModule
+  ],
+  exports: [
+    MatFormFieldModule,
+    MatCardModule
   ],
   providers: [],
   bootstrap: [AppComponent],
