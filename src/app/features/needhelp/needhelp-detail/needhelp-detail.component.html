@@ -1,17 +1,27 @@
 <mat-card class="example-card">
-    <mat-card-header>
-      <div mat-card-avatar class="example-header-image"></div>
-      <mat-card-title>{{ currentBank.title }}</mat-card-title>
-    </mat-card-header>
-    <img mat-card-image src="{{ currentBank.imagelink }}" alt="Photo offood bank">
-    <mat-card-content>
-      <p><strong>Opening Hours:</strong> {{ currentBank.openingHours }}</p>
-      <p><strong>Address:</strong> {{ currentBank.address }}</p>
-      <p><strong>Telephone:</strong> {{ currentBank.telephone }}</p>
-    </mat-card-content>
-    <mat-card-actions>
-      <button mat-button>Book</button>
-      <button mat-button>Details</button>
-    </mat-card-actions>
-  </mat-card>
-  
+  <mat-card-header>
+    <div mat-card-avatar class="example-header-image"></div>
+    <mat-card-title>{{ currentBank.title }}</mat-card-title>
+  </mat-card-header>
+  <img
+    mat-card-image
+    src="{{ currentBank.imagelink }}"
+    alt="Photo offood bank"
+  />
+  <mat-card-content>
+    <p><strong>Opening Hours:</strong> {{ currentBank.openingHours }}</p>
+    <p><strong>Address:</strong> {{ currentBank.address }}</p>
+    <p><strong>Telephone:</strong> {{ currentBank.telephone }}</p>
+  </mat-card-content>
+  <mat-card-actions>
+    <button mat-button>Book</button>
+    <button mat-button>Details</button>
+  </mat-card-actions>
+</mat-card>
+
+<button
+  routerLink="/needhelp/booking"
+  class="hover:bg-orange text-white lg:text-7xl text-xl font-bold py-8 px-24 rounded-full bg-sunshine"
+>
+  Schedule a booking
+</button>

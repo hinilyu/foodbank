@@ -15,11 +15,13 @@ const routes: Routes = [
   { path: 'login', component: LoginComponent },
   { path: 'signup', component: SignupComponent },
   { path: 'portal', component: StaffHomeComponent },
-  { path: 'needhelpdetail', component: NeedhelpDetailComponent },
+
   { path: 'needhelp', component: NeedhelpHomeComponent },
+  { path: 'needhelp/detail', component: NeedhelpDetailComponent },
+  { path: 'needhelp/booking', component: BookingPageComponent },
+
   { path: 'canhelp', component: CanhelpHomeComponent },
   { path: 'faq', component: FaqComponent },
-  { path: 'booking', component: BookingPageComponent },
 
   // otherwise redirect to home
   { path: '**', redirectTo: '', pathMatch: 'full' },
