@@ -1,0 +1,26 @@
+<mat-card>
+    <form #messageForm="ngForm">
+      <mat-form-field appearance="fill">
+        <mat-label>Content to be announced: </mat-label>
+        <br>
+        <textarea matInput
+                  name="message"
+                  [(ngModel)]="message"
+                  #messageInput="ngModel"
+                  maxlength="100"
+                  required></textarea>
+                </mat-form-field>
+                <div class="word-counter">
+                    Word count: {{wordCount}/100}
+                  </div>
+      <mat-card-actions>
+        <br>
+        
+        <button mat-raised-button color="primary"
+                [disabled]="!messageForm.valid || messageInput.value?.length > 100"
+                (click)="postMessage()">POST
+        </button>
+      </mat-card-actions>
+    </form>
+  </mat-card>
+  

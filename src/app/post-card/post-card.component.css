@@ -1,0 +1,34 @@
+/* message-card.component.css */
+mat-card {
+    margin: 20px; /* Adds some margin around the card */
+    width: auto; /* Adjust width as necessary, could be a fixed value or percentage */
+  }
+  
+  mat-form-field {
+    width: 100%; /* Makes the form field take the full width of the card */
+  }
+  
+  textarea[matInput] {
+    min-height: 120px; /* Sets a minimum height for the textarea */
+  }
+  
+  mat-hint {
+    font-style: italic;
+    color: #666; /* Light gray for the hint text */
+  }
+  
+  mat-card-actions {
+    display: flex;
+    justify-content: flex-end; /* Aligns the POST button to the right */
+  }
+  
+  button[mat-raised-button] {
+    margin: 8px 0; /* Adds some space around the button */
+  }
+  
+  /* Optional: Change the button color if it is disabled */
+  button[mat-raised-button][disabled] {
+    background-color: #ccc;
+    color: #666;
+  }
+  
