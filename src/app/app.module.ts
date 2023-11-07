@@ -62,7 +62,7 @@ import { NeedhelpDetailComponent } from './features/needhelp/needhelp-detail/nee
     MatSelectModule,
     ReactiveFormsModule,
     FormsModule,
-    MatRadioModule
+    MatRadioModule,
     MatCardModule,
   ],
   providers: [],
