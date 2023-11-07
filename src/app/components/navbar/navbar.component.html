@@ -1,39 +1,64 @@
-<mat-toolbar
-  class="bg-emerald-600 text-white font-mono border-x justify-between"
->
+<mat-toolbar class="border-x justify-between toolbar">
   <!-- Logo -->
-  <a routerLink="home" class="ml-20 text-3xl my-5">Scarborough Food Network</a>
-  <!-- shopping cart button -->
-  <button mat-icon-button [matMenuTriggerFor]="menu" class="mr-20">Menu</button>
-  <!-- Shopping Cart -->
-  <mat-menu #menu="matMenu" class="font-mono">
+  <a
+    routerLink="home"
+    class="md:ml-20 sm:ml-8 sm:block hidden lg:text-5xl md:text-4xl text-3xl my-5 font-title font-bold"
+    >Scarborough Food Network</a
+  >
+  <a
+    routerLink="home"
+    class="md:ml-20 sm:ml-8 ml-5 sm:hidden block my-5 font-title font-bold w-14"
+    ><img src="assets/logos/icon-bw.png"
+  /></a>
+  <!-- Menu button -->
+  <button
+    mat-icon-button
+    [matMenuTriggerFor]="menu"
+    class="lg:mr-20 md:mr-8 mr-5"
+  >
+    Menu
+  </button>
+  <!-- Menu -->
+  <mat-menu #menu="matMenu" class="font-title">
     <!-- header -->
     <div class="p-3 divide-y divide-solid">
       <!-- button -->
-      <div class="pb-3 flex justify-between">
-        <button routerLink="login" class="bg-teal-800 text-white p-3">
+      <div class="flex justify-between px-3">
+        <button routerLink="login" class="text-storm p-3 hover:text-deep-royal">
           Login
         </button>
-        <button routerLink="signup" class="bg-teal-800 text-white p-3">
+        <button
+          routerLink="signup"
+          class="text-storm p-3 hover:text-deep-royal"
+        >
           Sign up
         </button>
       </div>
-      <div class="pt-3">
-        <button routerLink="needhelp" class="bg-teal-800 text-white p-3">
+      <div class="pt-3 flex flex-col justify-center">
+        <button
+          routerLink="needhelp"
+          class="bg-orange font-bold text-white py-3 hover:bg-sunshine"
+        >
           Looking for food
         </button>
-        <button routerLink="canhelp" class="bg-teal-800 text-white p-3 my-5">
+        <button
+          routerLink="canhelp"
+          class="bg-orange hover:bg-sunshine font-bold text-white py-3 my-5"
+        >
           Trying to help
         </button>
       </div>
 
-      <div>
-        <button routerLink="faq" class="bg-teal-800 text-white p-3 my-5">
-          FAQ
+      <div class="pt-3 flex flex-col justify-center">
+        <button routerLink="faq" class="bg-slate-400 text-white p-3 my-5">
+          Got Questions?
         </button>
       </div>
-      <div class="pb-3 flex justify-between">
-        <button routerLink="staff" class="bg-teal-800 text-white p-3">
+      <div class="flex justify-center">
+        <button
+          routerLink="portal"
+          class="text-deep-royal hover:border-black bord p-3"
+        >
           Staff Portal
         </button>
       </div>
