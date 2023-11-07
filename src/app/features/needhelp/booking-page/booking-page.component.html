@@ -1,0 +1,159 @@
+<form [formGroup]="userForm" (ngSubmit)="submitForm()">
+
+<mat-accordion class="example-headers-align">
+  <mat-expansion-panel [expanded]="step === 0" (opened)="setStep(0)" hideToggle>
+    <mat-expansion-panel-header>
+      <mat-panel-title> Booking </mat-panel-title>
+      <mat-panel-description>
+        Please pick a date below
+        <mat-icon>event</mat-icon>
+      </mat-panel-description>
+    </mat-expansion-panel-header>
+
+    <button mat-raised-button (click)="selectDay('Monday')">Monday</button>
+    <button mat-raised-button (click)="selectDay('Tuesday')">Tuesday</button>
+    <button mat-raised-button (click)="selectDay('Wednesday')">Wednesday</button>
+    <button mat-raised-button (click)="selectDay('Thursday')">Thursday</button>
+    <button mat-raised-button (click)="selectDay('Friday')">Friday</button>
+  </mat-expansion-panel>
+
+  <mat-expansion-panel [expanded]="step === 1" (opened)="setStep(1)" hideToggle>
+    <mat-expansion-panel-header>
+        <mat-panel-title>
+          Timeslot
+        </mat-panel-title>
+        <mat-panel-description>
+          Please pick one available timeslot
+          <mat-icon>map</mat-icon>
+        </mat-panel-description>
+      </mat-expansion-panel-header>
+
+
+      <mat-grid-list cols="1" rowHeight="15:1" class="grid-list">
+        <mat-grid-tile>
+          <div class="grid-content">
+            <label>09:00 - 10:00</label>
+            <button mat-raised-button (click)="selectTimeslot('0900-1000')">Book</button>
+          </div>
+        </mat-grid-tile>
+        <mat-grid-tile>
+          <div class="grid-content">
+            <label>10:00 - 11:00</label>
+            <button mat-raised-button (click)="selectTimeslot('1000-1100')">Book</button>
+          </div>
+        </mat-grid-tile>
+        <mat-grid-tile>
+          <div class="grid-content">
+            <label>11:00 - 12:00</label>
+            <button mat-raised-button (click)="selectTimeslot('1100-1200')">Book</button>
+          </div>
+        </mat-grid-tile>
+        <mat-grid-tile>
+          <div class="grid-content">
+            <label>14:00 - 15:00</label>
+            <button mat-raised-button (click)="selectTimeslot('1400-1500')">Book</button>
+          </div>
+        </mat-grid-tile>
+        <mat-grid-tile>
+          <div class="grid-content">
+            <label>15:00 - 16:00</label>
+            <button mat-raised-button (click)="selectTimeslot('1500-1600')">Book</button>
+          </div>
+        </mat-grid-tile>
+        <mat-grid-tile>
+          <div class="grid-content">
+            <label>16:00 - 17:00</label>
+            <button mat-raised-button (click)="selectTimeslot('1600-1700')">Book</button>
+          </div>
+        </mat-grid-tile>
+      </mat-grid-list>
+
+    <mat-action-row>
+      <button mat-button color="warn" (click)="prevStep()">Previous</button>
+    </mat-action-row>
+  </mat-expansion-panel>
+
+  <mat-expansion-panel [expanded]="step === 2" (opened)="setStep(2)" hideToggle>
+    <mat-expansion-panel-header>
+      <mat-panel-title> Your Details </mat-panel-title>
+      <mat-panel-description>
+        Please provide your personal details
+        <mat-icon>date_range</mat-icon>
+      </mat-panel-description>
+    </mat-expansion-panel-header>
+
+
+    <!-- day: [''], 
+    timeSlot: [''],
+    firstName: ['', Validators.required],
+    lastName: ['', Validators.required],
+    householdMembers: [''],
+    phoneNumber: [''],
+    allergy: [''],
+    remarks: [''], -->
+    <div class="form-row">
+      <mat-form-field>
+        <mat-label>First name</mat-label>
+        <input matInput
+        formControlName="firstName">
+      </mat-form-field>
+    </div>
+    <div class="form-row">
+      <mat-form-field>
+        <mat-label>Last name</mat-label>
+        <input matInput
+        formControlName="lastName">
+      </mat-form-field>
+    </div>
+    <div class="form-row">
+      <mat-form-field>
+        <mat-label>No. of Household Member</mat-label>
+        <input matInput
+        formControlName="householdMembers">
+      </mat-form-field>
+    </div>
+    <div class="form-row">
+      <mat-form-field>
+        <mat-label>Phone Number</mat-label>
+        <input matInput placeholder="enter your phone number"
+        formControlName="phoneNumber">
+      </mat-form-field>
+    </div>
+    <div class="form-row">
+      <mat-radio-group formControlName="allergy">
+        <mat-label>Allergy</mat-label>
+        <mat-radio-button value="no" (change)="updateAllergyChoice('no')">No</mat-radio-button>
+        <mat-radio-button value="yes" (change)="updateAllergyChoice('yes')">Yes</mat-radio-button>
+      </mat-radio-group>
+      <mat-form-field *ngIf="userForm.get('allergy')!.value === 'yes'">
+        <mat-label>Allergy</mat-label>
+        <textarea matInput formControlName="allergyDetails"></textarea>
+      </mat-form-field>
+    </div>
+    <div class="form-row">
+      <mat-radio-group formControlName="notPreferFood">
+        <mat-label>Any Food not Preferred</mat-label>
+        <mat-radio-button value="no" (change)="updateFoodChoice('no')">No</mat-radio-button>
+        <mat-radio-button value="yes" (change)="updateFoodChoice('yes')">Yes</mat-radio-button>
+      </mat-radio-group>
+      <mat-form-field *ngIf="userForm.get('notPreferFood')!.value === 'yes'">
+        <mat-label>Details of not preferred food</mat-label>
+        <textarea matInput formControlName="notPreferFoodDetails"></textarea>
+      </mat-form-field>
+    </div>
+    <div class="form-row">
+      <mat-form-field>
+        <mat-label>Other Remarks</mat-label>
+        <textarea matInput
+        formControlName="remarks"></textarea>
+      </mat-form-field>
+    </div>
+    
+
+    <mat-action-row>
+      <button mat-button color="warn" (click)="prevStep()">Previous</button>
+      <button mat-button color="primary" type="submit">Submit</button>
+    </mat-action-row>
+  </mat-expansion-panel>
+</mat-accordion>
+</form>
