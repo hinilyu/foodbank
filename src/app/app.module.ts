@@ -17,6 +17,17 @@ import { FaqComponent } from './pages/faq/faq.component';
 import { NeedhelpHomeComponent } from './features/needhelp/needhelp-home/needhelp-home.component';
 import { CanhelpHomeComponent } from './features/canhelp/canhelp-home/canhelp-home.component';
 import { StaffHomeComponent } from './features/staff/staff-home/staff-home.component';
+import { BookingPageComponent } from './features/needhelp/booking-page/booking-page.component';
+import { MatExpansionModule } from '@angular/material/expansion';
+import { MatDatepickerModule } from '@angular/material/datepicker';
+import { MatButtonModule } from '@angular/material/button';
+import { MatInputModule } from '@angular/material/input';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatNativeDateModule } from '@angular/material/core';
+import { MatGridListModule } from '@angular/material/grid-list';
+import {MatSelectModule} from '@angular/material/select';
+import { ReactiveFormsModule, FormsModule } from '@angular/forms';
+import {MatRadioModule} from '@angular/material/radio';
 import { NeedhelpDetailComponent } from './features/needhelp/needhelp-detail/needhelp-detail.component';
 
 
@@ -31,6 +42,7 @@ import { NeedhelpDetailComponent } from './features/needhelp/needhelp-detail/nee
     NeedhelpHomeComponent,
     CanhelpHomeComponent,
     StaffHomeComponent,
+    BookingPageComponent,
     NeedhelpDetailComponent
   ],
   imports: [
@@ -40,6 +52,17 @@ import { NeedhelpDetailComponent } from './features/needhelp/needhelp-detail/nee
     MatToolbarModule,
     MatIconModule,
     MatMenuModule,
+    MatExpansionModule,
+    MatDatepickerModule,
+    MatButtonModule,
+    MatInputModule,
+    MatFormFieldModule,
+    MatNativeDateModule,
+    MatGridListModule,
+    MatSelectModule,
+    ReactiveFormsModule,
+    FormsModule,
+    MatRadioModule
     MatCardModule,
   ],
   providers: [],
