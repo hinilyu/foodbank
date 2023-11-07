@@ -9,6 +9,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatIconModule } from '@angular/material/icon';
+import {MatCardModule} from '@angular/material/card';
 import { MatMenuModule } from '@angular/material/menu';
 import { LoginComponent } from './pages/login/login.component';
 import { SignupComponent } from './pages/signup/signup.component';
@@ -16,6 +17,8 @@ import { FaqComponent } from './pages/faq/faq.component';
 import { NeedhelpHomeComponent } from './features/needhelp/needhelp-home/needhelp-home.component';
 import { CanhelpHomeComponent } from './features/canhelp/canhelp-home/canhelp-home.component';
 import { StaffHomeComponent } from './features/staff/staff-home/staff-home.component';
+import { NeedhelpDetailComponent } from './features/needhelp/needhelp-detail/needhelp-detail.component';
+
 
 @NgModule({
   declarations: [
@@ -28,6 +31,7 @@ import { StaffHomeComponent } from './features/staff/staff-home/staff-home.compo
     NeedhelpHomeComponent,
     CanhelpHomeComponent,
     StaffHomeComponent,
+    NeedhelpDetailComponent
   ],
   imports: [
     BrowserModule,
@@ -36,6 +40,7 @@ import { StaffHomeComponent } from './features/staff/staff-home/staff-home.compo
     MatToolbarModule,
     MatIconModule,
     MatMenuModule,
+    MatCardModule,
   ],
   providers: [],
   bootstrap: [AppComponent],
