@@ -16,8 +16,10 @@ import { NeedhelpHomeComponent } from './features/needhelp/needhelp-home/needhel
 import { CanhelpHomeComponent } from './features/canhelp/canhelp-home/canhelp-home.component';
 import { StaffHomeComponent } from './features/staff/staff-home/staff-home.component';
 import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatInputModule } from '@angular/material/input';
 import { MatCardModule } from '@angular/material/card';
-import { LoginIvanComponent } from './login-ivan/login-ivan.component';
+
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -29,8 +31,7 @@ import { LoginIvanComponent } from './login-ivan/login-ivan.component';
     FaqComponent,
     NeedhelpHomeComponent,
     CanhelpHomeComponent,
-    StaffHomeComponent,
-    LoginIvanComponent
+    StaffHomeComponent
   ],
   imports: [
     BrowserModule,
@@ -40,11 +41,10 @@ import { LoginIvanComponent } from './login-ivan/login-ivan.component';
     MatIconModule,
     MatMenuModule,
     MatFormFieldModule,
-    MatCardModule
-  ],
-  exports: [
-    MatFormFieldModule,
-    MatCardModule
+    MatCardModule,
+    MatInputModule,
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent],
