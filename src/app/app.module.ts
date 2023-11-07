@@ -16,6 +16,11 @@ import { FaqComponent } from './pages/faq/faq.component';
 import { NeedhelpHomeComponent } from './features/needhelp/needhelp-home/needhelp-home.component';
 import { CanhelpHomeComponent } from './features/canhelp/canhelp-home/canhelp-home.component';
 import { StaffHomeComponent } from './features/staff/staff-home/staff-home.component';
+import {MatCardModule} from '@angular/material/card';
+import { PostCardComponent } from './pages/post-card/post-card.component';
+import {MatFormFieldModule} from '@angular/material/form-field';
+import {MatSelectModule} from '@angular/material/select';
+
 
 @NgModule({
   declarations: [
@@ -28,6 +33,8 @@ import { StaffHomeComponent } from './features/staff/staff-home/staff-home.compo
     NeedhelpHomeComponent,
     CanhelpHomeComponent,
     StaffHomeComponent,
+    PostCardComponent
+    
   ],
   imports: [
     BrowserModule,
@@ -36,6 +43,9 @@ import { StaffHomeComponent } from './features/staff/staff-home/staff-home.compo
     MatToolbarModule,
     MatIconModule,
     MatMenuModule,
+    MatCardModule,
+    MatFormFieldModule,
+    MatSelectModule
   ],
   providers: [],
   bootstrap: [AppComponent],
