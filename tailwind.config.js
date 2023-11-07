@@ -9,6 +9,7 @@ module.exports = {
         sunshine: "#F2AB26",
         orange: "#D87D0D",
         apple: "#890A03",
+        button: "#2F4858",
       },
       fontFamily: {
         title: ["Raleway", "Roboto", '"Open Sans"'],

@@ -19,24 +19,31 @@
     Menu
   </button>
   <!-- Menu -->
-  <mat-menu #menu="matMenu" class="">
+  <mat-menu #menu="matMenu" class="font-title">
     <!-- header -->
     <div class="p-3 divide-y divide-solid">
       <!-- button -->
       <div class="flex justify-between px-3">
-        <button routerLink="login" class="text-storm p-3">Login</button>
-        <button routerLink="signup" class="text-storm p-3">Sign up</button>
+        <button routerLink="login" class="text-storm p-3 hover:text-deep-royal">
+          Login
+        </button>
+        <button
+          routerLink="signup"
+          class="text-storm p-3 hover:text-deep-royal"
+        >
+          Sign up
+        </button>
       </div>
       <div class="pt-3 flex flex-col justify-center">
         <button
           routerLink="needhelp"
-          class="bg-sunshine font-bold text-white py-3"
+          class="bg-orange font-bold text-white py-3 hover:bg-sunshine"
         >
           Looking for food
         </button>
         <button
           routerLink="canhelp"
-          class="bg-orange font-bold text-white py-3 my-5"
+          class="bg-orange hover:bg-sunshine font-bold text-white py-3 my-5"
         >
           Trying to help
         </button>
@@ -48,7 +55,10 @@
         </button>
       </div>
       <div class="flex justify-center">
-        <button routerLink="portal" class="text-deep-royal p-3">
+        <button
+          routerLink="portal"
+          class="text-deep-royal hover:border-black bord p-3"
+        >
           Staff Portal
         </button>
       </div>

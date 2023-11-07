@@ -1,5 +1,15 @@
-.toolbar {
-  background-color: white;
-  color: #d87d0d;
-  min-height: 150px;
+@media screen and (max-width: 500px) {
+  .toolbar {
+    background-color: white;
+    color: #281b24;
+    height: 80px;
+  }
+}
+
+@media screen and (min-width: 500px) {
+  .toolbar {
+    background-color: white;
+    color: #281b24;
+    height: 150px;
+  }
 }
