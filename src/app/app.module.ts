@@ -6,7 +6,6 @@ import { AppComponent } from './app.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { HomeComponent } from './pages/home/home.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatIconModule } from '@angular/material/icon';
 import {MatCardModule} from '@angular/material/card';
@@ -29,7 +28,6 @@ import {MatSelectModule} from '@angular/material/select';
 import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 import {MatRadioModule} from '@angular/material/radio';
 import { NeedhelpDetailComponent } from './features/needhelp/needhelp-detail/needhelp-detail.component';
-
 
 @NgModule({
   declarations: [
@@ -64,6 +62,7 @@ import { NeedhelpDetailComponent } from './features/needhelp/needhelp-detail/nee
     FormsModule,
     MatRadioModule
     MatCardModule,
+
   ],
   providers: [],
   bootstrap: [AppComponent],
