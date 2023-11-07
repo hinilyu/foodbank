@@ -1,1 +1,42 @@
-<p>navbar works!</p>
+<mat-toolbar
+  class="bg-emerald-600 text-white font-mono border-x justify-between"
+>
+  <!-- Logo -->
+  <a routerLink="home" class="ml-20 text-3xl my-5">Scarborough Food Network</a>
+  <!-- shopping cart button -->
+  <button mat-icon-button [matMenuTriggerFor]="menu" class="mr-20">Menu</button>
+  <!-- Shopping Cart -->
+  <mat-menu #menu="matMenu" class="font-mono">
+    <!-- header -->
+    <div class="p-3 divide-y divide-solid">
+      <!-- button -->
+      <div class="pb-3 flex justify-between">
+        <button routerLink="login" class="bg-teal-800 text-white p-3">
+          Login
+        </button>
+        <button routerLink="signup" class="bg-teal-800 text-white p-3">
+          Sign up
+        </button>
+      </div>
+      <div class="pt-3">
+        <button routerLink="needhelp" class="bg-teal-800 text-white p-3">
+          Looking for food
+        </button>
+        <button routerLink="canhelp" class="bg-teal-800 text-white p-3 my-5">
+          Trying to help
+        </button>
+      </div>
+
+      <div>
+        <button routerLink="faq" class="bg-teal-800 text-white p-3 my-5">
+          FAQ
+        </button>
+      </div>
+      <div class="pb-3 flex justify-between">
+        <button routerLink="staff" class="bg-teal-800 text-white p-3">
+          Staff Portal
+        </button>
+      </div>
+    </div>
+  </mat-menu>
+</mat-toolbar>
