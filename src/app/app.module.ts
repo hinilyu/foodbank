@@ -9,6 +9,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatIconModule } from '@angular/material/icon';
+import {MatCardModule} from '@angular/material/card';
 import { MatMenuModule } from '@angular/material/menu';
 import { LoginComponent } from './pages/login/login.component';
 import { SignupComponent } from './pages/signup/signup.component';
@@ -27,6 +28,7 @@ import { MatGridListModule } from '@angular/material/grid-list';
 import {MatSelectModule} from '@angular/material/select';
 import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 import {MatRadioModule} from '@angular/material/radio';
+import { NeedhelpDetailComponent } from './features/needhelp/needhelp-detail/needhelp-detail.component';
 
 
 @NgModule({
@@ -41,6 +43,7 @@ import {MatRadioModule} from '@angular/material/radio';
     CanhelpHomeComponent,
     StaffHomeComponent,
     BookingPageComponent,
+    NeedhelpDetailComponent
   ],
   imports: [
     BrowserModule,
@@ -60,6 +63,7 @@ import {MatRadioModule} from '@angular/material/radio';
     ReactiveFormsModule,
     FormsModule,
     MatRadioModule
+    MatCardModule,
   ],
   providers: [],
   bootstrap: [AppComponent],
