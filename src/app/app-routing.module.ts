@@ -6,6 +6,8 @@ import { SignupComponent } from './pages/signup/signup.component';
 import { StaffHomeComponent } from './features/staff/staff-home/staff-home.component';
 import { NeedhelpHomeComponent } from './features/needhelp/needhelp-home/needhelp-home.component';
 import { CanhelpHomeComponent } from './features/canhelp/canhelp-home/canhelp-home.component';
+import { StaffAnnouncementComponent } from './features/staff/staff-announcement/staff-announcement.component';
+import { StaffScanComponent } from './features/staff/staff-scan/staff-scan.component';
 
 const routes: Routes = [
   { path: '', component: HomeComponent, pathMatch: 'full' },
@@ -14,6 +16,8 @@ const routes: Routes = [
   { path: 'portal', component: StaffHomeComponent },
   { path: 'needhelp', component: NeedhelpHomeComponent },
   { path: 'canhelp', component: CanhelpHomeComponent },
+  { path: 'portal/announcement', component: StaffAnnouncementComponent },
+  { path: 'portal/scan', component: StaffScanComponent },
 
   // otherwise redirect to home
   { path: '**', redirectTo: '', pathMatch: 'full' },

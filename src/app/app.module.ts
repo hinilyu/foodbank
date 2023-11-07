@@ -20,6 +20,8 @@ import {MatCardModule} from '@angular/material/card';
 import { PostCardComponent } from './pages/post-card/post-card.component';
 import {MatFormFieldModule} from '@angular/material/form-field';
 import {MatSelectModule} from '@angular/material/select';
+import { StaffAnnouncementComponent } from './features/staff/staff-announcement/staff-announcement.component';
+import { StaffScanComponent } from './features/staff/staff-scan/staff-scan.component';
 
 
 @NgModule({
@@ -33,7 +35,9 @@ import {MatSelectModule} from '@angular/material/select';
     NeedhelpHomeComponent,
     CanhelpHomeComponent,
     StaffHomeComponent,
-    PostCardComponent
+    PostCardComponent,
+    StaffAnnouncementComponent,
+    StaffScanComponent
     
   ],
   imports: [
