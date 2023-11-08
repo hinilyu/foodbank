@@ -1,5 +1,6 @@
 import { NgModule, isDevMode } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { CommonModule } from '@angular/common';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -21,7 +22,8 @@ import { BookingDetailComponent } from './pages/booking-detail/booking-detail.co
 import { BookingPageComponent } from './features/needhelp/booking-page/booking-page.component';
 import { NeedhelpDetailComponent } from './features/needhelp/needhelp-detail/needhelp-detail.component';
 import { NeedhelpMapComponent } from './features/needhelp/needhelp-map/needhelp-map.component';
-
+import {ChatComponent} from './components/chat/chat.component';
+import { ChatService } from './service/chat.service';
 //Material Module
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatToolbarModule } from '@angular/material/toolbar';
@@ -43,6 +45,7 @@ import { NeedhelpListComponent } from './features/needhelp/needhelp-list/needhel
 
 import { MatSnackBarModule } from '@angular/material/snack-bar';
 
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -62,10 +65,12 @@ import { MatSnackBarModule } from '@angular/material/snack-bar';
     NeedhelpMapComponent,
     NeedhelpListComponent,
     BookingDetailComponent,
+    ChatComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
+    CommonModule,
     BrowserAnimationsModule,
     MatToolbarModule,
     MatIconModule,
@@ -85,7 +90,7 @@ import { MatSnackBarModule } from '@angular/material/snack-bar';
     MatCardModule,
     MatDividerModule,
   ],
-  providers: [],
+  providers: [ChatService],
   bootstrap: [AppComponent],
 })
 export class AppModule {}
