@@ -5,31 +5,46 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { HomeComponent } from './pages/home/home.component';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
-import { MatToolbarModule } from '@angular/material/toolbar';
-import { MatIconModule } from '@angular/material/icon';
-import { MatMenuModule } from '@angular/material/menu';
 import { LoginComponent } from './pages/login/login.component';
 import { SignupComponent } from './pages/signup/signup.component';
 import { FaqComponent } from './pages/faq/faq.component';
 import { NeedhelpHomeComponent } from './features/needhelp/needhelp-home/needhelp-home.component';
 import { CanhelpHomeComponent } from './features/canhelp/canhelp-home/canhelp-home.component';
 import { StaffHomeComponent } from './features/staff/staff-home/staff-home.component';
-import {MatCardModule} from '@angular/material/card';
+
 import { PostCardComponent } from './pages/post-card/post-card.component';
-import {MatFormFieldModule} from '@angular/material/form-field';
-import {MatSelectModule} from '@angular/material/select';
 import { StaffAnnouncementComponent } from './features/staff/staff-announcement/staff-announcement.component';
 import { StaffScanComponent } from './features/staff/staff-scan/staff-scan.component';
-import { MatFormFieldControl } from '@angular/material/form-field';
-import { MatInputModule } from '@angular/material/input';
+
 import { ServiceWorkerModule } from '@angular/service-worker';
+
+
+
+import { BookingDetailComponent } from './pages/booking-detail/booking-detail.component';
+import { BookingPageComponent } from './features/needhelp/booking-page/booking-page.component';
+import { NeedhelpDetailComponent } from './features/needhelp/needhelp-detail/needhelp-detail.component';
+import { NeedhelpMapComponent } from './features/needhelp/needhelp-map/needhelp-map.component';
+
+//Material Module
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MatToolbarModule } from '@angular/material/toolbar';
+import { MatIconModule } from '@angular/material/icon';
+import { MatCardModule } from '@angular/material/card';
+import { MatMenuModule } from '@angular/material/menu';
+import { MatExpansionModule } from '@angular/material/expansion';
+import { MatDatepickerModule } from '@angular/material/datepicker';
 import { MatButtonModule } from '@angular/material/button';
+import { MatInputModule } from '@angular/material/input';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatNativeDateModule } from '@angular/material/core';
+import { MatGridListModule } from '@angular/material/grid-list';
+import { MatSelectModule } from '@angular/material/select';
+import { ReactiveFormsModule, FormsModule } from '@angular/forms';
+import { MatRadioModule } from '@angular/material/radio';
+import { MatDividerModule } from '@angular/material/divider';
+
 import { MatSnackBarModule } from '@angular/material/snack-bar';
-import { FormsModule } from '@angular/forms';
-
-
 
 @NgModule({
   declarations: [
@@ -44,7 +59,11 @@ import { FormsModule } from '@angular/forms';
     StaffHomeComponent,
     PostCardComponent,
     StaffAnnouncementComponent,
-    StaffScanComponent
+    StaffScanComponent,
+    BookingPageComponent,
+    NeedhelpDetailComponent,
+    NeedhelpMapComponent,
+    BookingDetailComponent,
   ],
   imports: [
     BrowserModule,
@@ -53,19 +72,26 @@ import { FormsModule } from '@angular/forms';
     MatToolbarModule,
     MatIconModule,
     MatMenuModule,
-    MatCardModule,
-    MatFormFieldModule,
-    MatSelectModule,
-    MatInputModule,
+    MatExpansionModule,
+    MatDatepickerModule,
     MatButtonModule,
+    MatInputModule,
+    MatFormFieldModule,
     MatSnackBarModule,
-    FormsModule,
     ServiceWorkerModule.register('ngsw-worker.js', {
       enabled: !isDevMode(),
       // Register the ServiceWorker as soon as the application is stable
       // or after 30 seconds (whichever comes first).
       registrationStrategy: 'registerWhenStable:30000'
     })
+    MatNativeDateModule,
+    MatGridListModule,
+    MatSelectModule,
+    ReactiveFormsModule,
+    FormsModule,
+    MatRadioModule,
+    MatCardModule,
+    MatDividerModule,
   ],
   providers: [],
   bootstrap: [AppComponent],

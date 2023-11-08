@@ -1,39 +1,93 @@
 <mat-toolbar
-  class="bg-emerald-600 text-white font-mono border-x justify-between"
+  class="border-x justify-between toolbar bg-gradient-to-r from-cyan-500 to-blue-500"
 >
   <!-- Logo -->
-  <a routerLink="home" class="ml-20 text-3xl my-5">Scarborough Food Network</a>
-  <!-- shopping cart button -->
-  <button mat-icon-button [matMenuTriggerFor]="menu" class="mr-20">Menu</button>
-  <!-- Shopping Cart -->
-  <mat-menu #menu="matMenu" class="font-mono">
+  <a
+    routerLink="home"
+    class="md:ml-14 sm:ml-8 sm:block hidden lg:text-5xl md:text-4xl text-3xl my-5 font-extrabold font-title hover:drop-shadow-lg p-2 btn"
+    >Scarborough Food Network</a
+  >
+  <a
+    routerLink="home"
+    class="md:ml-20 ml-12 sm:hidden block my-5 font-title font-bold w-14"
+    ><img src="assets/logos/icon-bw.png"
+  /></a>
+  <!-- Menu button -->
+  <button
+    [matMenuTriggerFor]="menu"
+    class="lg:mr-20 md:mr-14 mr-12 text-3xl menu"
+    (mouseenter)="menuButton = hover"
+    (mouseleave)="menuButton = normal"
+  >
+    <i class="{{ menuButton }}"></i>
+  </button>
+  <!-- Menu -->
+  <mat-menu #menu="matMenu" class="font-title menu w-[500px]">
     <!-- header -->
-    <div class="p-3 divide-y divide-solid">
-      <!-- button -->
-      <div class="pb-3 flex justify-between">
-        <button routerLink="login" class="bg-teal-800 text-white p-3">
+    <div class="p-3 divide-y divide-solid mx-5">
+      <!-- Not Logged In -->
+      <div
+        class="flex flex-col justify-center px-3"
+        *ngIf="isLoggedIn == false"
+      >
+        <button
+          routerLink="login"
+          class="text-storm text-xl p-3 hover:underline"
+        >
           Login
         </button>
-        <button routerLink="signup" class="bg-teal-800 text-white p-3">
+        <button
+          routerLink="signup"
+          class="text-storm text-xl p-3 hover:underline"
+        >
           Sign up
         </button>
       </div>
-      <div class="pt-3">
-        <button routerLink="needhelp" class="bg-teal-800 text-white p-3">
-          Looking for food
+
+      <!-- Logged In -->
+      <div class="flex flex-col justify-center px-3" *ngIf="isLoggedIn == true">
+        <button
+          routerLink="profile"
+          class="text-storm p-3 text-xl hover:underline"
+        >
+          Profile
         </button>
-        <button routerLink="canhelp" class="bg-teal-800 text-white p-3 my-5">
-          Trying to help
+        <button
+          (click)="logout()"
+          class="text-storm p-3 text-xl hover:underline"
+        >
+          Logout
         </button>
       </div>
 
-      <div>
-        <button routerLink="faq" class="bg-teal-800 text-white p-3 my-5">
-          FAQ
+      <div class="pt-3 flex flex-col justify-center">
+        <button
+          routerLink="needhelp"
+          class="bg-sunshine font-bold text-white py-3 text-xl hover:bg-orange rounded-lg mt-3"
+        >
+          Looking for Food
+        </button>
+        <button
+          routerLink="canhelp"
+          class="bg-sunshine hover:bg-orange font-bold text-xl text-white py-3 my-5 rounded-lg"
+        >
+          Want to Help
         </button>
       </div>
-      <div class="pb-3 flex justify-between">
-        <button routerLink="portal" class="bg-teal-800 text-white p-3">
+
+      <div class="pt-3 flex flex-col justify-center">
+        <button
+          routerLink="faq"
+          class="bg-slate-200 rounded-md text-black p-3 my-5 hover:bg-slate-300"
+        >
+          Got Questions?
+        </button>
+      </div>
+      <div class="flex justify-center">
+        <button
+          routerLink="portal"
+          class="text-deep-royal hover:underline p-3 mt-5"
+        >
           Staff Portal
         </button>
       </div>
