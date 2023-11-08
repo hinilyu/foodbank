@@ -1,4 +1,3 @@
-
 <div
   class="flex flex-wrap justify-evenly m-10 p-10 border-2 shadow-md rounded-sm"
 >
@@ -13,7 +12,7 @@
       class="max-w-xl w-[100%]"
     />
   </div>
-  <div class="p-10 md:text-lg">
+  <div class="md:p-10 md:text-lg mt-5">
     <p><strong>Opening Hours:</strong> {{ currentBank.openingHours }}</p>
     <p><strong>Address:</strong> {{ currentBank.address }}</p>
     <p><strong>Telephone:</strong> {{ currentBank.telephone }}</p>
@@ -34,17 +33,17 @@
   </div>
 
   <div
-    class="basis-full justify-center flex flex-row items-center align-middle"
+    class="basis-full justify-center flex flex-row items-center align-middle mb-20"
   >
     <button
       routerLink="/needhelp/booking"
-      class="hover:bg-orange text-white lg:text-xl font-bold px-5 py-3 rounded-full bg-sunshine mt-20 mx-10"
+      class="hover:bg-orange text-white lg:text-xl text-sm font-bold md:px-5 md:py-3 rounded-full bg-sunshine mt-20 p-2 md:mx-10"
     >
       Schedule a booking
     </button>
     <button
       routerLink="/needhelp"
-      class="hover:border-transparent hover:bg-sunshine text-sunshine hover:text-white lg:text-xl font-bold px-5 py-3 mx-10 rounded-full bg-transparent border border-sunshine mt-20"
+      class="hover:border-transparent hover:bg-sunshine text-sunshine hover:text-white lg:text-xl text-sm font-bold md:px-5 md:py-3 p-2 md:mx-10 mx-5 rounded-full bg-transparent border border-sunshine mt-20"
     >
       Back
     </button>
