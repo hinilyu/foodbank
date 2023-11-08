@@ -11,9 +11,7 @@ export class NavbarComponent implements OnInit {
   menuButton: string = this.normal;
   isLoggedIn: boolean = localStorage.getItem('loggedIn') == 'true' || false;
 
-  ngOnInit(): void {
-    console.log(this.isLoggedIn);
-  }
+  ngOnInit(): void {}
 
   logout() {
     localStorage.setItem('loggedIn', 'false');
