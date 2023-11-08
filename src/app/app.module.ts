@@ -1,4 +1,4 @@
-import { NgModule } from '@angular/core';
+import { NgModule, isDevMode } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
@@ -16,6 +16,8 @@ import { StaffHomeComponent } from './features/staff/staff-home/staff-home.compo
 import { PostCardComponent } from './pages/post-card/post-card.component';
 import { StaffAnnouncementComponent } from './features/staff/staff-announcement/staff-announcement.component';
 import { StaffScanComponent } from './features/staff/staff-scan/staff-scan.component';
+
+import { BookingDetailComponent } from './pages/booking-detail/booking-detail.component';
 import { BookingPageComponent } from './features/needhelp/booking-page/booking-page.component';
 import { NeedhelpDetailComponent } from './features/needhelp/needhelp-detail/needhelp-detail.component';
 import { NeedhelpMapComponent } from './features/needhelp/needhelp-map/needhelp-map.component';
@@ -37,6 +39,9 @@ import { MatSelectModule } from '@angular/material/select';
 import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 import { MatRadioModule } from '@angular/material/radio';
 import { MatDividerModule } from '@angular/material/divider';
+import { NeedhelpListComponent } from './features/needhelp/needhelp-list/needhelp-list.component';
+
+import { MatSnackBarModule } from '@angular/material/snack-bar';
 
 @NgModule({
   declarations: [
@@ -55,6 +60,8 @@ import { MatDividerModule } from '@angular/material/divider';
     BookingPageComponent,
     NeedhelpDetailComponent,
     NeedhelpMapComponent,
+    NeedhelpListComponent,
+    BookingDetailComponent,
   ],
   imports: [
     BrowserModule,
@@ -68,6 +75,7 @@ import { MatDividerModule } from '@angular/material/divider';
     MatButtonModule,
     MatInputModule,
     MatFormFieldModule,
+    MatSnackBarModule,
     MatNativeDateModule,
     MatGridListModule,
     MatSelectModule,

@@ -12,6 +12,8 @@ import { FaqComponent } from './pages/faq/faq.component';
 import { BookingPageComponent } from './features/needhelp/booking-page/booking-page.component';
 import { NeedhelpDetailComponent } from './features/needhelp/needhelp-detail/needhelp-detail.component';
 import { NeedhelpMapComponent } from './features/needhelp/needhelp-map/needhelp-map.component';
+import { NeedhelpListComponent } from './features/needhelp/needhelp-list/needhelp-list.component';
+import { BookingDetailComponent } from './pages/booking-detail/booking-detail.component';
 
 const routes: Routes = [
   { path: '', component: HomeComponent, pathMatch: 'full' },
@@ -23,11 +25,16 @@ const routes: Routes = [
   { path: 'location/:name', component: NeedhelpDetailComponent },
   { path: 'needhelp/booking', component: BookingPageComponent },
   { path: 'needhelp/map', component: NeedhelpMapComponent },
+  { path: 'needhelp/list', component: NeedhelpListComponent },
+  { path: 'map', component: NeedhelpMapComponent },
+  { path: 'list', component: NeedhelpListComponent },
 
   { path: 'canhelp', component: CanhelpHomeComponent },
   { path: 'portal/announcement', component: StaffAnnouncementComponent },
   { path: 'portal/scan', component: StaffScanComponent },
   { path: 'faq', component: FaqComponent },
+
+  { path: 'booking-detail', component: BookingDetailComponent },
 
   // otherwise redirect to home
   { path: '**', redirectTo: '', pathMatch: 'full' },
