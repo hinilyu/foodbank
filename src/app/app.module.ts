@@ -21,6 +21,8 @@ import { BookingDetailComponent } from './pages/booking-detail/booking-detail.co
 import { BookingPageComponent } from './features/needhelp/booking-page/booking-page.component';
 import { NeedhelpDetailComponent } from './features/needhelp/needhelp-detail/needhelp-detail.component';
 import { NeedhelpMapComponent } from './features/needhelp/needhelp-map/needhelp-map.component';
+import { NeedhelpListComponent } from './features/needhelp/needhelp-list/needhelp-list.component';
+import { ProfilePageComponent } from './pages/profile-page/profile-page.component';
 
 //Material Module
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
@@ -39,10 +41,8 @@ import { MatSelectModule } from '@angular/material/select';
 import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 import { MatRadioModule } from '@angular/material/radio';
 import { MatDividerModule } from '@angular/material/divider';
-import { NeedhelpListComponent } from './features/needhelp/needhelp-list/needhelp-list.component';
-
+import { MatButtonToggleModule } from '@angular/material/button-toggle';
 import { MatSnackBarModule } from '@angular/material/snack-bar';
-import { ProfilePageComponent } from './pages/profile-page/profile-page.component';
 
 @NgModule({
   declarations: [
@@ -86,6 +86,7 @@ import { ProfilePageComponent } from './pages/profile-page/profile-page.componen
     MatRadioModule,
     MatCardModule,
     MatDividerModule,
+    MatButtonToggleModule,
   ],
   providers: [],
   bootstrap: [AppComponent],
