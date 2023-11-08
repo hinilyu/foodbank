@@ -9,21 +9,32 @@ declare var google: any;
   templateUrl: './needhelp-map.component.html',
   styleUrls: ['./needhelp-map.component.css']
 })
-
 export class NeedhelpMapComponent implements OnInit {
   map: any;
+
+  constructor(private router: Router) {}
 
   ngOnInit() {
     this.initializeMap();
   }
 
-  constructor(private router: Router) {}
+  navigateToMapPage() {
+    // Navigate to the map page
+    this.router.navigate(['/map']);
+  }
+
+  navigateToListPage() {
+    // Navigate to the list page
+    this.router.navigate(['/list']);
+  }
 
   private initializeMap(): void {
     this.map = new google.maps.Map(document.getElementById('map'), {
       center: { lat: 43.7772276, lng: -79.2535623 },
       zoom: 12
     });
+
+    const infoWindow = new google.maps.InfoWindow(); // Create an info window
 
     foodBanks.forEach((location) => {
       const marker = new google.maps.Marker({
@@ -35,6 +46,17 @@ export class NeedhelpMapComponent implements OnInit {
       marker.addListener('click', () => {
         // Navigate to the detail view when a marker is clicked
         this.router.navigate(['/location', location.title]);
+      });
+
+      marker.addListener('mouseover', () => {
+        // Show a pop-up window with additional information on mouseover
+        infoWindow.setContent(`<div><img src="${location.imagelink}" width="150px" height="100px"><br>${location.title}</div>`);
+        infoWindow.open(this.map, marker);
+      });
+
+      marker.addListener('mouseout', () => {
+        // Close the pop-up window on mouseout
+        infoWindow.close();
       });
     });
   }

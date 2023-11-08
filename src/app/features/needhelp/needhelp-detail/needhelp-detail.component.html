@@ -1,45 +1,22 @@
-<!-- <div class="p-20">
-  <mat-card class="example-card">
-    <mat-card-header>
-      <div mat-card-avatar class="example-header-image"></div>
-      <mat-card-title>{{ currentBank.title }}</mat-card-title>
-    </mat-card-header>
-    <img
-      mat-card-image
-      src="{{ currentBank.imagelink }}"
-      alt="Photo of food bank"
-      class="w-[50%]"
-    />
-    <mat-card-content>
-      <p><strong>Opening Hours:</strong> {{ currentBank.openingHours }}</p>
-      <p><strong>Address:</strong> {{ currentBank.address }}</p>
-      <p><strong>Telephone:</strong> {{ currentBank.telephone }}</p>
-    </mat-card-content>
-    <mat-card-actions>
-      <button mat-button>Book</button>
-      <button mat-button>Details</button>
-    </mat-card-actions>
-  </mat-card>
-</div> -->
 
 <div
   class="flex flex-wrap justify-evenly m-10 p-10 border-2 shadow-md rounded-sm"
 >
   <div class="p-3 basis-full font-body lg:text-4xl text-2xl font-black mb-10">
-    {{ currentBank?.title }}
+    {{ currentBank.title }}
   </div>
   <div class="">
     <img
       mat-card-image
-      src="{{ currentBank?.imagelink }}"
+      src="{{ currentBank.imagelink }}"
       alt="Photo of food bank"
       class="max-w-xl w-[100%]"
     />
   </div>
   <div class="p-10 md:text-lg">
-    <p><strong>Opening Hours:</strong> {{ currentBank?.openingHours }}</p>
-    <p><strong>Address:</strong> {{ currentBank?.address }}</p>
-    <p><strong>Telephone:</strong> {{ currentBank?.telephone }}</p>
+    <p><strong>Opening Hours:</strong> {{ currentBank.openingHours }}</p>
+    <p><strong>Address:</strong> {{ currentBank.address }}</p>
+    <p><strong>Telephone:</strong> {{ currentBank.telephone }}</p>
     <mat-card class="mt-10">
       <mat-card-header>
         <mat-card-subtitle>Recent Update</mat-card-subtitle>

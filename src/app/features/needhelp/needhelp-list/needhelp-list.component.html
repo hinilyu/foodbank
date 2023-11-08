@@ -1,0 +1,11 @@
+<button (click)="navigateToMapPage()">Switch to Map</button>
+<div *ngFor="let location of locations">
+    <h3>{{ location.title }}</h3>
+    <p><strong>Opening Hours:</strong> {{ location.openingHours }}</p>
+    <p><strong>Address:</strong> {{ location.address }}</p>
+    <p><strong>Telephone:</strong> {{ location.telephone }}</p>
+    <br>
+    <br>
+    <!-- You can include additional details as needed -->
+  </div>
+  
