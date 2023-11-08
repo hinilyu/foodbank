@@ -38,8 +38,6 @@ import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 import { MatRadioModule } from '@angular/material/radio';
 import { MatDividerModule } from '@angular/material/divider';
 
-
-
 @NgModule({
   declarations: [
     AppComponent,
@@ -53,8 +51,7 @@ import { MatDividerModule } from '@angular/material/divider';
     StaffHomeComponent,
     PostCardComponent,
     StaffAnnouncementComponent,
-    StaffScanComponent
-    
+    StaffScanComponent,
     BookingPageComponent,
     NeedhelpDetailComponent,
     NeedhelpMapComponent,
