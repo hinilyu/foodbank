@@ -22,6 +22,8 @@ import { BookingPageComponent } from './features/needhelp/booking-page/booking-p
 import { NeedhelpDetailComponent } from './features/needhelp/needhelp-detail/needhelp-detail.component';
 import { NeedhelpMapComponent } from './features/needhelp/needhelp-map/needhelp-map.component';
 
+import {CdkAccordionModule} from '@angular/cdk/accordion';
+
 //Material Module
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatToolbarModule } from '@angular/material/toolbar';
@@ -86,6 +88,7 @@ import { ProfilePageComponent } from './pages/profile-page/profile-page.componen
     MatRadioModule,
     MatCardModule,
     MatDividerModule,
+    CdkAccordionModule
   ],
   providers: [],
   bootstrap: [AppComponent],
