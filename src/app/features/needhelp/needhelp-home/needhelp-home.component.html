@@ -28,12 +28,12 @@
   ></div>
   <div [hidden]="selectView == 'map'">
     <div *ngFor="let location of locations">
-      <h3>{{ location.title }}</h3>
-      <p><strong>Opening Hours:</strong> {{ location.openingHours }}</p>
-      <p><strong>Address:</strong> {{ location.address }}</p>
-      <p><strong>Telephone:</strong> {{ location.telephone }}</p>
-      <br />
-      <br />
+      <a [routerLink]="['/location', location.title]" class="info-block">
+        <h3>{{ location.title }}</h3>
+        <p><strong>Opening Hours:</strong> {{ location.openingHours }}</p>
+        <p><strong>Address:</strong> {{ location.address }}</p>
+        <p><strong>Telephone:</strong> {{ location.telephone }}</p>
+      </a>
       <!-- You can include additional details as needed -->
     </div>
   </div>
