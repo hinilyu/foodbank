@@ -45,6 +45,7 @@ import { NeedhelpListComponent } from './features/needhelp/needhelp-list/needhel
 
 import { MatSnackBarModule } from '@angular/material/snack-bar';
 import { ProfilePageComponent } from './pages/profile-page/profile-page.component';
+import { ChatbotComponent } from './components/chatbot/chatbot.component';
 
 @NgModule({
   declarations: [
@@ -66,6 +67,7 @@ import { ProfilePageComponent } from './pages/profile-page/profile-page.componen
     NeedhelpListComponent,
     BookingDetailComponent,
     ProfilePageComponent,
+    ChatbotComponent,
   ],
   imports: [
     BrowserModule,
