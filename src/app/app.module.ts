@@ -37,6 +37,7 @@ import { MatSelectModule } from '@angular/material/select';
 import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 import { MatRadioModule } from '@angular/material/radio';
 import { MatDividerModule } from '@angular/material/divider';
+import { NeedhelpListComponent } from './features/needhelp/needhelp-list/needhelp-list.component';
 
 @NgModule({
   declarations: [
@@ -55,6 +56,7 @@ import { MatDividerModule } from '@angular/material/divider';
     BookingPageComponent,
     NeedhelpDetailComponent,
     NeedhelpMapComponent,
+    NeedhelpListComponent,
   ],
   imports: [
     BrowserModule,
