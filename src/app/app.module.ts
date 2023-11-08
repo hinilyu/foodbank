@@ -39,6 +39,7 @@ import { MatSelectModule } from '@angular/material/select';
 import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 import { MatRadioModule } from '@angular/material/radio';
 import { MatDividerModule } from '@angular/material/divider';
+import { NeedhelpListComponent } from './features/needhelp/needhelp-list/needhelp-list.component';
 
 import { MatSnackBarModule } from '@angular/material/snack-bar';
 
@@ -59,6 +60,7 @@ import { MatSnackBarModule } from '@angular/material/snack-bar';
     BookingPageComponent,
     NeedhelpDetailComponent,
     NeedhelpMapComponent,
+    NeedhelpListComponent,
     BookingDetailComponent,
   ],
   imports: [
