@@ -17,10 +17,6 @@ import { PostCardComponent } from './pages/post-card/post-card.component';
 import { StaffAnnouncementComponent } from './features/staff/staff-announcement/staff-announcement.component';
 import { StaffScanComponent } from './features/staff/staff-scan/staff-scan.component';
 
-import { ServiceWorkerModule } from '@angular/service-worker';
-
-
-
 import { BookingDetailComponent } from './pages/booking-detail/booking-detail.component';
 import { BookingPageComponent } from './features/needhelp/booking-page/booking-page.component';
 import { NeedhelpDetailComponent } from './features/needhelp/needhelp-detail/needhelp-detail.component';
@@ -78,12 +74,6 @@ import { MatSnackBarModule } from '@angular/material/snack-bar';
     MatInputModule,
     MatFormFieldModule,
     MatSnackBarModule,
-    ServiceWorkerModule.register('ngsw-worker.js', {
-      enabled: !isDevMode(),
-      // Register the ServiceWorker as soon as the application is stable
-      // or after 30 seconds (whichever comes first).
-      registrationStrategy: 'registerWhenStable:30000'
-    })
     MatNativeDateModule,
     MatGridListModule,
     MatSelectModule,
