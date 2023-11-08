@@ -12,6 +12,10 @@ import { FaqComponent } from './pages/faq/faq.component';
 import { NeedhelpHomeComponent } from './features/needhelp/needhelp-home/needhelp-home.component';
 import { CanhelpHomeComponent } from './features/canhelp/canhelp-home/canhelp-home.component';
 import { StaffHomeComponent } from './features/staff/staff-home/staff-home.component';
+
+import { PostCardComponent } from './pages/post-card/post-card.component';
+import { StaffAnnouncementComponent } from './features/staff/staff-announcement/staff-announcement.component';
+import { StaffScanComponent } from './features/staff/staff-scan/staff-scan.component';
 import { BookingPageComponent } from './features/needhelp/booking-page/booking-page.component';
 import { NeedhelpDetailComponent } from './features/needhelp/needhelp-detail/needhelp-detail.component';
 import { NeedhelpMapComponent } from './features/needhelp/needhelp-map/needhelp-map.component';
@@ -35,6 +39,7 @@ import { MatRadioModule } from '@angular/material/radio';
 import { MatDividerModule } from '@angular/material/divider';
 
 
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -46,6 +51,10 @@ import { MatDividerModule } from '@angular/material/divider';
     NeedhelpHomeComponent,
     CanhelpHomeComponent,
     StaffHomeComponent,
+    PostCardComponent,
+    StaffAnnouncementComponent,
+    StaffScanComponent
+    
     BookingPageComponent,
     NeedhelpDetailComponent,
     NeedhelpMapComponent,

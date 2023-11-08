@@ -6,6 +6,8 @@ import { SignupComponent } from './pages/signup/signup.component';
 import { StaffHomeComponent } from './features/staff/staff-home/staff-home.component';
 import { NeedhelpHomeComponent } from './features/needhelp/needhelp-home/needhelp-home.component';
 import { CanhelpHomeComponent } from './features/canhelp/canhelp-home/canhelp-home.component';
+import { StaffAnnouncementComponent } from './features/staff/staff-announcement/staff-announcement.component';
+import { StaffScanComponent } from './features/staff/staff-scan/staff-scan.component';
 import { FaqComponent } from './pages/faq/faq.component';
 import { BookingPageComponent } from './features/needhelp/booking-page/booking-page.component';
 import { NeedhelpDetailComponent } from './features/needhelp/needhelp-detail/needhelp-detail.component';
@@ -23,6 +25,8 @@ const routes: Routes = [
   { path: 'needhelp/map', component: NeedhelpMapComponent },
 
   { path: 'canhelp', component: CanhelpHomeComponent },
+  { path: 'portal/announcement', component: StaffAnnouncementComponent },
+  { path: 'portal/scan', component: StaffScanComponent },
   { path: 'faq', component: FaqComponent },
 
   // otherwise redirect to home
