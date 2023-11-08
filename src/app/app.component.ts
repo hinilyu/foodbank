@@ -4,9 +4,8 @@ import { Component } from '@angular/core';
   selector: 'app-root',
   template: `
   <app-navbar></app-navbar>
-  <router-outlet></router-outlet>
-  <app-chatbot></app-chatbot>`
-  ,
+  <app-chat></app-chat>
+  <router-outlet></router-outlet>`,
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {

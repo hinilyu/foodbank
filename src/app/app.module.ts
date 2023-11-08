@@ -1,5 +1,6 @@
 import { NgModule, isDevMode } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { CommonModule } from '@angular/common';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -21,6 +22,8 @@ import { BookingDetailComponent } from './pages/booking-detail/booking-detail.co
 import { BookingPageComponent } from './features/needhelp/booking-page/booking-page.component';
 import { NeedhelpDetailComponent } from './features/needhelp/needhelp-detail/needhelp-detail.component';
 import { NeedhelpMapComponent } from './features/needhelp/needhelp-map/needhelp-map.component';
+import {ChatComponent} from './components/chat/chat.component';
+import { ChatService } from './service/chat.service';
 import { NeedhelpListComponent } from './features/needhelp/needhelp-list/needhelp-list.component';
 import { ProfilePageComponent } from './pages/profile-page/profile-page.component';
 
@@ -48,6 +51,7 @@ import { MatSnackBarModule } from '@angular/material/snack-bar';
 import { ChatbotComponent } from './components/chatbot/chatbot.component';
 
 
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -67,12 +71,14 @@ import { ChatbotComponent } from './components/chatbot/chatbot.component';
     NeedhelpMapComponent,
     NeedhelpListComponent,
     BookingDetailComponent,
+    ChatComponent
     ProfilePageComponent,
     ChatbotComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
+    CommonModule,
     BrowserAnimationsModule,
     MatToolbarModule,
     MatIconModule,
@@ -94,7 +100,7 @@ import { ChatbotComponent } from './components/chatbot/chatbot.component';
     MatButtonToggleModule,
     CdkAccordionModule
   ],
-  providers: [],
+  providers: [ChatService],
   bootstrap: [AppComponent],
 })
 export class AppModule {}
