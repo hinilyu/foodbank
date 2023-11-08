@@ -12,7 +12,8 @@
         <div class="example-accordion-item-header" (click)="accordionItem.toggle()">
           {{ item }}
           <span class="example-accordion-item-description">
-            Click to {{ accordionItem.expanded ? 'close' : 'open' }}
+            {{ accordionItem.expanded ? '▲' : '▼'}}
+            <!-- Click to {{ accordionItem.expanded ? 'close' : 'open' }} -->
           </span>
         </div>
         <div
