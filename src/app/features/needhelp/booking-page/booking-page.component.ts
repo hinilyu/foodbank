@@ -10,9 +10,12 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 export class BookingPageComponent {
 
   userForm: FormGroup;
+  timeslotLabel = 'Please pick one available timeslot';
+  bookingLabel = 'Please pick a date below';
 
   constructor(private fb: FormBuilder) {
     this.userForm = this.fb.group({
+      location: [''],
       day: [''], 
       timeSlot: [''],
       firstName: { value: 'Messi', disabled: true },
@@ -36,11 +39,13 @@ export class BookingPageComponent {
 
   selectDay(day: string) {
     this.userForm.get('day')!.setValue(day);
+    this.bookingLabel = day;
     this.nextStep();
   }
   
   selectTimeslot(timeSlot: string) {
     this.userForm.get('timeSlot')!.setValue(timeSlot);
+    this.timeslotLabel = timeSlot;
     this.nextStep();
   }
 
