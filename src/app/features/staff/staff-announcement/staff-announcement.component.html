@@ -39,8 +39,7 @@
       <div class="flex justify-center">
         <button
           type="submit"
-          class="btn hover:bg-deep-royal text-white text-lg font-bold px-5 py-3 m-5 rounded-full bg-storm w-[50%]"
-        >
+          class="btn hover:bg-deep-royal text-white text-lg font-bold px-5 py-3 m-5 rounded-full bg-storm w-[50%]">
           Post
         </button>
       </div>
@@ -58,25 +57,27 @@
   >
     <mat-card class="p-10">
       <mat-card-title>{{ announcement.topic }}</mat-card-title>
-      @myself
+      <p>myself</p>
       <div
         class="mt-6 border border-sunshine rounded-md overflow-auto h-40 px-5 py-2"
       >
         {{ announcement.content }}
       </div>
-      <mat-card-actions>
+      <!-- <mat-card-actions> -->
+        <div style ="position: absolute; top: 0; right: 0; padding-top: 20px; padding-right: 15px;">
         <button mat-button (click)="editAnnouncement(i)">Edit</button>
         <button mat-button color="warn" (click)="deleteAnnouncement(i)">
           Delete
         </button>
-      </mat-card-actions>
+      </div>
+      <!-- </mat-card-actions> -->
     </mat-card>
   </div>
   <!-- demo -->
   <div class="m-10 h-80 w-[90%]">
     <mat-card class="p-10">
       <mat-card-title>Cabbage expires soon</mat-card-title>
-      @Centennial College
+      <p>Centennial College</p>
       <div
         class="mt-6 border border-sunshine rounded-md overflow-auto h-40 px-5 py-2"
       >
@@ -87,7 +88,7 @@
   <div class="m-10 h-80 w-[90%]">
     <mat-card class="p-10">
       <mat-card-title>Cabbage expires soon</mat-card-title>
-      @Centennial College
+      <p>Centennial College</p>
       <div
         class="mt-6 border border-sunshine rounded-md overflow-auto h-40 px-5 py-2"
       >
@@ -98,7 +99,7 @@
   <div class="m-10 h-80 w-[90%]">
     <mat-card class="p-10">
       <mat-card-title>Cabbage expires soon</mat-card-title>
-      @Centennial College
+      <p>Centennial College</p>
       <div
         class="mt-6 border border-sunshine rounded-md overflow-auto h-40 px-5 py-2"
       >
@@ -109,7 +110,7 @@
   <div class="m-10 h-80 w-[90%]">
     <mat-card class="p-10">
       <mat-card-title>Cabbage expires soon</mat-card-title>
-      @Centennial College
+      <p>Centennial College</p>
       <div
         class="mt-6 border border-sunshine rounded-md overflow-auto h-40 px-5 py-2"
       >

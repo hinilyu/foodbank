@@ -28,6 +28,7 @@ function onScanFailure(error: any) {
   // for example:
   console.warn(`Code scan error = ${error}`);
 }
+
 window.onload = function () {
   var x = document.getElementById("booking-detail");
   if (x) {
