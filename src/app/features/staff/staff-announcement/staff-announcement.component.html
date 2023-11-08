@@ -1,6 +1,6 @@
 <div class="flex justify-center items-center font-title w-screen">
   <div
-    class="flex flex-col xl:max-w-[50vw] w-[80vw] justify-center p-10 border-4 border-sunshine rounded-md"
+    class="flex flex-col xl:max-w-[50vw] w-[80vw] justify-center p-10 border-4 border-storm rounded-md"
   >
     <div class="font-title text-5xl mb-10 text-center">What's new?</div>
     <form
@@ -39,7 +39,7 @@
       <div class="flex justify-center">
         <button
           type="submit"
-          class="btn hover:bg-orange text-white text-lg font-bold px-5 py-3 m-5 rounded-full bg-sunshine w-[50%]"
+          class="btn hover:bg-deep-royal text-white text-lg font-bold px-5 py-3 m-5 rounded-full bg-storm w-[50%]"
         >
           Post
         </button>
@@ -47,62 +47,70 @@
     </form>
   </div>
 </div>
-
-<div class="grid grid-cols-3 w-screen p-20">
-  <!-- demo -->
-  <div class="m-10 h-80 w-[100%]">
-    <mat-card class="p-10">
-      <mat-card-title>Cabbage expires soon</mat-card-title>
-      @Centennial College
-      <div
-        class="mt-6 border border-sunshine rounded-md overflow-auto h-40 px-5 py-2"
-      >
-        Please come to pick up before Nov 12
-      </div>
-    </mat-card>
-  </div>
-  <div class="m-10 h-80 w-[100%]">
-    <mat-card class="p-10">
-      <mat-card-title>Cabbage expires soon</mat-card-title>
-      @Centennial College
-      <div
-        class="mt-6 border border-sunshine rounded-md overflow-auto h-40 px-5 py-2"
-      >
-        Please come to pick up before Nov 12
-      </div>
-    </mat-card>
-  </div>
-  <div class="m-10 h-80 w-[100%]">
-    <mat-card class="p-10">
-      <mat-card-title>Cabbage expires soon</mat-card-title>
-      @Centennial College
-      <div
-        class="mt-6 border border-sunshine rounded-md overflow-auto h-40 px-5 py-2"
-      >
-        Please come to pick up before Nov 12
-      </div>
-    </mat-card>
-  </div>
-  <div class="m-10 h-80 w-[100%]">
-    <mat-card class="p-10">
-      <mat-card-title>Cabbage expires soon</mat-card-title>
-      @Centennial College
-      <div
-        class="mt-6 border border-sunshine rounded-md overflow-auto h-40 px-5 py-2"
-      >
-        Please come to pick up before Nov 12
-      </div>
-    </mat-card>
-  </div>
-
-  <!-- demo -->
+<hr />
+<div class="flex justify-center w-screen text-center font-title mt-40">
+  <p class="text-5xl">Around Scarborough</p>
 </div>
+<div class="grid lg:grid-cols-3 w-screen p-20">
+  <!-- demo -->
+  <div class="m-10 h-80 w-[90%]">
+    <mat-card class="p-10">
+      <mat-card-title>Cabbage expires soon</mat-card-title>
+      @Centennial College
+      <div
+        class="mt-6 border border-sunshine rounded-md overflow-auto h-40 px-5 py-2"
+      >
+        Please come to pick up before Nov 12
+      </div>
+    </mat-card>
+  </div>
+  <div class="m-10 h-80 w-[90%]">
+    <mat-card class="p-10">
+      <mat-card-title>Cabbage expires soon</mat-card-title>
+      @Centennial College
+      <div
+        class="mt-6 border border-sunshine rounded-md overflow-auto h-40 px-5 py-2"
+      >
+        Please come to pick up before Nov 12
+      </div>
+    </mat-card>
+  </div>
+  <div class="m-10 h-80 w-[90%]">
+    <mat-card class="p-10">
+      <mat-card-title>Cabbage expires soon</mat-card-title>
+      @Centennial College
+      <div
+        class="mt-6 border border-sunshine rounded-md overflow-auto h-40 px-5 py-2"
+      >
+        Please come to pick up before Nov 12
+      </div>
+    </mat-card>
+  </div>
+  <div class="m-10 h-80 w-[90%]">
+    <mat-card class="p-10">
+      <mat-card-title>Cabbage expires soon</mat-card-title>
+      @Centennial College
+      <div
+        class="mt-6 border border-sunshine rounded-md overflow-auto h-40 px-5 py-2"
+      >
+        Please come to pick up before Nov 12
+      </div>
+    </mat-card>
+  </div>
 
-<div class="grid grid-cols-3 w-screen p-20">
-  <div *ngFor="let announcement of announcements; let i = index" class="m-10">
+  <!-- demo -->
+
+  <div
+    *ngFor="let announcement of announcements; let i = index"
+    class="m-10 max-h-80 w-[90%]"
+  >
     <mat-card class="p-10">
       <mat-card-title>{{ announcement.topic }}</mat-card-title>
-      <mat-card-content>{{ announcement.content }}</mat-card-content>
+      <div
+        class="mt-6 border border-sunshine rounded-md overflow-auto h-40 px-5 py-2"
+      >
+        {{ announcement.content }}
+      </div>
       <mat-card-actions>
         <button mat-button (click)="editAnnouncement(i)">Edit</button>
         <button mat-button color="warn" (click)="deleteAnnouncement(i)">
@@ -112,6 +120,8 @@
     </mat-card>
   </div>
 </div>
+
+<div class="grid grid-cols-3 w-screen p-20"></div>
 
 <!-- <mat-card>
   <mat-card-content>
