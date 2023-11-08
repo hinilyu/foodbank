@@ -24,6 +24,8 @@ import { NeedhelpMapComponent } from './features/needhelp/needhelp-map/needhelp-
 import { NeedhelpListComponent } from './features/needhelp/needhelp-list/needhelp-list.component';
 import { ProfilePageComponent } from './pages/profile-page/profile-page.component';
 
+import {CdkAccordionModule} from '@angular/cdk/accordion';
+
 //Material Module
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatToolbarModule } from '@angular/material/toolbar';
@@ -43,6 +45,8 @@ import { MatRadioModule } from '@angular/material/radio';
 import { MatDividerModule } from '@angular/material/divider';
 import { MatButtonToggleModule } from '@angular/material/button-toggle';
 import { MatSnackBarModule } from '@angular/material/snack-bar';
+import { ChatbotComponent } from './components/chatbot/chatbot.component';
+
 
 @NgModule({
   declarations: [
@@ -64,6 +68,7 @@ import { MatSnackBarModule } from '@angular/material/snack-bar';
     NeedhelpListComponent,
     BookingDetailComponent,
     ProfilePageComponent,
+    ChatbotComponent,
   ],
   imports: [
     BrowserModule,
@@ -87,6 +92,7 @@ import { MatSnackBarModule } from '@angular/material/snack-bar';
     MatCardModule,
     MatDividerModule,
     MatButtonToggleModule,
+    CdkAccordionModule
   ],
   providers: [],
   bootstrap: [AppComponent],
