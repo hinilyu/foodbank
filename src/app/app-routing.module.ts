@@ -13,12 +13,14 @@ import { BookingPageComponent } from './features/needhelp/booking-page/booking-p
 import { NeedhelpDetailComponent } from './features/needhelp/needhelp-detail/needhelp-detail.component';
 import { NeedhelpMapComponent } from './features/needhelp/needhelp-map/needhelp-map.component';
 import { BookingDetailComponent } from './pages/booking-detail/booking-detail.component';
+import { ProfilePageComponent } from './pages/profile-page/profile-page.component';
 
 const routes: Routes = [
   { path: '', component: HomeComponent, pathMatch: 'full' },
   { path: 'login', component: LoginComponent },
   { path: 'signup', component: SignupComponent },
   { path: 'portal', component: StaffHomeComponent },
+  { path: 'profile-page', component: ProfilePageComponent },
 
   { path: 'needhelp', component: NeedhelpHomeComponent },
   { path: 'location/:name', component: NeedhelpDetailComponent },

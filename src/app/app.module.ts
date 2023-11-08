@@ -41,6 +41,7 @@ import { MatRadioModule } from '@angular/material/radio';
 import { MatDividerModule } from '@angular/material/divider';
 
 import { MatSnackBarModule } from '@angular/material/snack-bar';
+import { ProfilePageComponent } from './pages/profile-page/profile-page.component';
 
 @NgModule({
   declarations: [
@@ -60,6 +61,7 @@ import { MatSnackBarModule } from '@angular/material/snack-bar';
     NeedhelpDetailComponent,
     NeedhelpMapComponent,
     BookingDetailComponent,
+    ProfilePageComponent,
   ],
   imports: [
     BrowserModule,
