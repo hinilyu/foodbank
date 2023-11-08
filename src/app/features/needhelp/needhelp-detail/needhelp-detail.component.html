@@ -1,23 +1,16 @@
-<mat-card class="example-card">
+<mat-card class="example-card" *ngIf="currentBank">
   <mat-card-header>
     <div mat-card-avatar class="example-header-image"></div>
-    <mat-card-title>{{ currentBank.title }}</mat-card-title>
+    <mat-card-title>{{ currentBank?.title }}</mat-card-title> <!-- Safe navigation operator used here -->
   </mat-card-header>
-  <img
-    mat-card-image
-    src="{{ currentBank.imagelink }}"
-    alt="Photo offood bank"
-  />
+  <img mat-card-image [src]="currentBank?.imagelink" alt="Photo of food bank" /> <!-- Safe navigation operator used here -->
   <mat-card-content>
-    <p><strong>Opening Hours:</strong> {{ currentBank.openingHours }}</p>
-    <p><strong>Address:</strong> {{ currentBank.address }}</p>
-    <p><strong>Telephone:</strong> {{ currentBank.telephone }}</p>
+    <p><strong>Opening Hours:</strong> {{ currentBank?.openingHours }}</p> <!-- Safe navigation operator used here -->
+    <p><strong>Address:</strong> {{ currentBank?.address }}</p> <!-- Safe navigation operator used here -->
+    <p><strong>Telephone:</strong> {{ currentBank?.telephone }}</p> <!-- Safe navigation operator used here -->
   </mat-card-content>
-  <mat-card-actions>
-    <button mat-button>Book</button>
-    <button mat-button>Details</button>
-  </mat-card-actions>
 </mat-card>
+
 
 <button
   routerLink="/needhelp/booking"

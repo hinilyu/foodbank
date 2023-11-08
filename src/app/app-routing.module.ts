@@ -9,6 +9,7 @@ import { CanhelpHomeComponent } from './features/canhelp/canhelp-home/canhelp-ho
 import { FaqComponent } from './pages/faq/faq.component';
 import { BookingPageComponent } from './features/needhelp/booking-page/booking-page.component';
 import { NeedhelpDetailComponent } from './features/needhelp/needhelp-detail/needhelp-detail.component';
+import { NeedhelpMapComponent } from './features/needhelp/needhelp-map/needhelp-map.component';
 
 const routes: Routes = [
   { path: '', component: HomeComponent, pathMatch: 'full' },
@@ -17,8 +18,9 @@ const routes: Routes = [
   { path: 'portal', component: StaffHomeComponent },
 
   { path: 'needhelp', component: NeedhelpHomeComponent },
-  { path: 'needhelp/detail', component: NeedhelpDetailComponent },
+  { path: 'location/:name', component: NeedhelpDetailComponent },
   { path: 'needhelp/booking', component: BookingPageComponent },
+  { path: 'needhelp/map', component: NeedhelpMapComponent },
 
   { path: 'canhelp', component: CanhelpHomeComponent },
   { path: 'faq', component: FaqComponent },
