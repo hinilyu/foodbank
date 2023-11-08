@@ -1,4 +1,4 @@
-import { NgModule } from '@angular/core';
+import { NgModule, isDevMode } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
@@ -22,6 +22,13 @@ import {MatFormFieldModule} from '@angular/material/form-field';
 import {MatSelectModule} from '@angular/material/select';
 import { StaffAnnouncementComponent } from './features/staff/staff-announcement/staff-announcement.component';
 import { StaffScanComponent } from './features/staff/staff-scan/staff-scan.component';
+import { MatFormFieldControl } from '@angular/material/form-field';
+import { MatInputModule } from '@angular/material/input';
+import { ServiceWorkerModule } from '@angular/service-worker';
+import { MatButtonModule } from '@angular/material/button';
+import { MatSnackBarModule } from '@angular/material/snack-bar';
+import { FormsModule } from '@angular/forms';
+
 
 
 @NgModule({
@@ -38,7 +45,6 @@ import { StaffScanComponent } from './features/staff/staff-scan/staff-scan.compo
     PostCardComponent,
     StaffAnnouncementComponent,
     StaffScanComponent
-    
   ],
   imports: [
     BrowserModule,
@@ -49,7 +55,17 @@ import { StaffScanComponent } from './features/staff/staff-scan/staff-scan.compo
     MatMenuModule,
     MatCardModule,
     MatFormFieldModule,
-    MatSelectModule
+    MatSelectModule,
+    MatInputModule,
+    MatButtonModule,
+    MatSnackBarModule,
+    FormsModule,
+    ServiceWorkerModule.register('ngsw-worker.js', {
+      enabled: !isDevMode(),
+      // Register the ServiceWorker as soon as the application is stable
+      // or after 30 seconds (whichever comes first).
+      registrationStrategy: 'registerWhenStable:30000'
+    })
   ],
   providers: [],
   bootstrap: [AppComponent],
