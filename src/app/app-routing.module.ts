@@ -8,16 +8,26 @@ import { NeedhelpHomeComponent } from './features/needhelp/needhelp-home/needhel
 import { CanhelpHomeComponent } from './features/canhelp/canhelp-home/canhelp-home.component';
 import { StaffAnnouncementComponent } from './features/staff/staff-announcement/staff-announcement.component';
 import { StaffScanComponent } from './features/staff/staff-scan/staff-scan.component';
+import { FaqComponent } from './pages/faq/faq.component';
+import { BookingPageComponent } from './features/needhelp/booking-page/booking-page.component';
+import { NeedhelpDetailComponent } from './features/needhelp/needhelp-detail/needhelp-detail.component';
+import { NeedhelpMapComponent } from './features/needhelp/needhelp-map/needhelp-map.component';
 
 const routes: Routes = [
   { path: '', component: HomeComponent, pathMatch: 'full' },
   { path: 'login', component: LoginComponent },
   { path: 'signup', component: SignupComponent },
   { path: 'portal', component: StaffHomeComponent },
+
   { path: 'needhelp', component: NeedhelpHomeComponent },
+  { path: 'location/:name', component: NeedhelpDetailComponent },
+  { path: 'needhelp/booking', component: BookingPageComponent },
+  { path: 'needhelp/map', component: NeedhelpMapComponent },
+
   { path: 'canhelp', component: CanhelpHomeComponent },
   { path: 'portal/announcement', component: StaffAnnouncementComponent },
   { path: 'portal/scan', component: StaffScanComponent },
+  { path: 'faq', component: FaqComponent },
 
   // otherwise redirect to home
   { path: '**', redirectTo: '', pathMatch: 'full' },
