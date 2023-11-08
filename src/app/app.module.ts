@@ -14,6 +14,7 @@ import { CanhelpHomeComponent } from './features/canhelp/canhelp-home/canhelp-ho
 import { StaffHomeComponent } from './features/staff/staff-home/staff-home.component';
 import { BookingPageComponent } from './features/needhelp/booking-page/booking-page.component';
 import { NeedhelpDetailComponent } from './features/needhelp/needhelp-detail/needhelp-detail.component';
+import { NeedhelpMapComponent } from './features/needhelp/needhelp-map/needhelp-map.component';
 
 //Material Module
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
@@ -33,6 +34,7 @@ import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 import { MatRadioModule } from '@angular/material/radio';
 import { MatDividerModule } from '@angular/material/divider';
 
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -46,6 +48,7 @@ import { MatDividerModule } from '@angular/material/divider';
     StaffHomeComponent,
     BookingPageComponent,
     NeedhelpDetailComponent,
+    NeedhelpMapComponent,
   ],
   imports: [
     BrowserModule,
