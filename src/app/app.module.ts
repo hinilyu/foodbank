@@ -1,4 +1,4 @@
-import { NgModule } from '@angular/core';
+import { NgModule, isDevMode } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
@@ -16,6 +16,12 @@ import { StaffHomeComponent } from './features/staff/staff-home/staff-home.compo
 import { PostCardComponent } from './pages/post-card/post-card.component';
 import { StaffAnnouncementComponent } from './features/staff/staff-announcement/staff-announcement.component';
 import { StaffScanComponent } from './features/staff/staff-scan/staff-scan.component';
+
+import { ServiceWorkerModule } from '@angular/service-worker';
+
+
+
+import { BookingDetailComponent } from './pages/booking-detail/booking-detail.component';
 import { BookingPageComponent } from './features/needhelp/booking-page/booking-page.component';
 import { NeedhelpDetailComponent } from './features/needhelp/needhelp-detail/needhelp-detail.component';
 import { NeedhelpMapComponent } from './features/needhelp/needhelp-map/needhelp-map.component';
@@ -37,7 +43,8 @@ import { MatSelectModule } from '@angular/material/select';
 import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 import { MatRadioModule } from '@angular/material/radio';
 import { MatDividerModule } from '@angular/material/divider';
-import { BookingDetailComponent } from './pages/booking-detail/booking-detail.component';
+
+import { MatSnackBarModule } from '@angular/material/snack-bar';
 
 @NgModule({
   declarations: [
@@ -70,6 +77,13 @@ import { BookingDetailComponent } from './pages/booking-detail/booking-detail.co
     MatButtonModule,
     MatInputModule,
     MatFormFieldModule,
+    MatSnackBarModule,
+    ServiceWorkerModule.register('ngsw-worker.js', {
+      enabled: !isDevMode(),
+      // Register the ServiceWorker as soon as the application is stable
+      // or after 30 seconds (whichever comes first).
+      registrationStrategy: 'registerWhenStable:30000'
+    })
     MatNativeDateModule,
     MatGridListModule,
     MatSelectModule,

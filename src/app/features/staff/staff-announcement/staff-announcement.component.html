@@ -1,4 +1,4 @@
-<mat-card>
+<!-- <mat-card>
   <mat-card-content>
     <mat-form-field appearance="fill">
       <mat-label>Topic: </mat-label>
@@ -16,12 +16,73 @@
     <br />
     <mat-form-field>
       <mat-label>Content to be announced: </mat-label>
-      <mat-label>Wrtie here..</mat-label>
       <textarea matInput></textarea>
     </mat-form-field>
   </mat-card-content>
   <br />
-  <mat-card-actions>
-    <button mat-button (click)="postMessage()">POST</button>
-  </mat-card-actions>
+
+  <button>Post</button>
+
+</mat-card> -->
+<!-- 
+<mat-card>
+  <form (ngSubmit)="postAnnouncement(announcementForm.value)">
+    <mat-form-field>
+      <mat-label>Topic</mat-label>
+      <input matInput placeholder="Enter the topic" name="topic" required>
+    </mat-form-field>
+    <mat-form-field>
+      <mat-label>Type</mat-label>
+      <mat-select name="type" required>
+        <mat-option value="internal">Internal</mat-option>
+        <mat-option value="public">Public</mat-option>
+      </mat-select>
+    </mat-form-field>
+    <mat-form-field>
+      <mat-label>Content</mat-label>
+      <textarea matInput placeholder="Enter the content" name="content" required></textarea>
+    </mat-form-field>
+    <button mat-button type="submit">Post</button>
+  </form>
+</mat-card> -->
+
+<mat-card>
+  <form #announcementForm="ngForm" (ngSubmit)="postAnnouncement(announcementForm.value)">
+    <mat-form-field>
+      <mat-label>Topic</mat-label>
+      <input matInput placeholder="Enter the topic" name="topic" [(ngModel)]="announcement.topic" required>
+    </mat-form-field>
+    <mat-form-field>
+      <mat-label>Type</mat-label>
+      <mat-select name="type" [(ngModel)]="announcement.type" required>
+        <mat-option value="internal">Internal</mat-option>
+        <mat-option value="public">Public</mat-option>
+      </mat-select>
+    </mat-form-field>
+    <br>
+    <mat-form-field>
+      <mat-label>Content</mat-label>
+      <textarea matInput placeholder="Enter the content" name="content" [(ngModel)]="announcement.content" required></textarea>
+    </mat-form-field>
+    <br>
+    <button mat-button type="submit">Post</button>
+  </form>
 </mat-card>
+
+<!-- Display posted announcements here -->
+<!-- <div *ngFor="let announcement of announcements">
+  <mat-card>
+    <mat-card-title>{{ announcement.topic }}</mat-card-title>
+    <mat-card-content>{{ announcement.content }}</mat-card-content>
+  </mat-card>
+</div> -->
+<div *ngFor="let announcement of announcements; let i = index">
+  <mat-card>
+    <mat-card-title>{{ announcement.topic }}</mat-card-title>
+    <mat-card-content>{{ announcement.content }}</mat-card-content>
+    <mat-card-actions>
+      <button mat-button (click)="editAnnouncement(i)">Edit</button>
+      <button mat-button color="warn" (click)="deleteAnnouncement(i)">Delete</button>
+    </mat-card-actions>
+  </mat-card>
+</div>
