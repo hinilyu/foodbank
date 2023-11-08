@@ -1,0 +1,71 @@
+<div class="flex justify-center items-center font-title flex-col">
+  <mat-accordion>
+    <mat-expansion-panel class="md:w-[500px] w-screen mx-20">
+      <mat-expansion-panel-header>
+        <mat-panel-title> Profile </mat-panel-title>
+      </mat-expansion-panel-header>
+      <form [formGroup]="profileForm" class="flex flex-col justify-center p-10">
+        <mat-form-field>
+          <mat-label>First Name</mat-label>
+          <input matInput formControlName="fname" />
+        </mat-form-field>
+        <mat-form-field>
+          <mat-label>Last Name</mat-label>
+          <input matInput formControlName="lname" />
+        </mat-form-field>
+
+        <mat-form-field>
+          <mat-label>Postal code</mat-label>
+          <input matInput formControlName="postal" />
+        </mat-form-field>
+
+        <mat-form-field>
+          <mat-label>Phone Number</mat-label>
+          <input matInput formControlName="phoneNumber" />
+        </mat-form-field>
+
+        <mat-form-field>
+          <mat-label>Email</mat-label>
+          <input matInput formControlName="email" />
+        </mat-form-field>
+
+        <mat-form-field>
+          <mat-label>Number of Household Member</mat-label>
+          <input matInput formControlName="numberHoushold" />
+        </mat-form-field>
+      </form>
+      <div class="flex flex-col justify-center items-center text-center mb-10">
+        <button
+          routerLink="/signup"
+          class="btn hover:bg-orange text-white text-lg font-bold px-5 py-3 m-5 rounded-full bg-sunshine w-[50%]"
+        >
+          Update Profile
+        </button>
+      </div>
+    </mat-expansion-panel>
+  </mat-accordion>
+  <br />
+  <h3>Up coming Booking</h3>
+  <br />
+  <mat-card
+    class="md:w-[500px] w-screen mx-20 hover:drop-shadow hover:cursor-pointer"
+    routerLink="/booking-detail"
+  >
+    <mat-card-header>
+      <mat-card-title-group>
+        <mat-card-title>ABC Street, Scarborough</mat-card-title>
+        <mat-card-subtitle
+          >Date & Time: Tuesday 10:00 ~ 11:00</mat-card-subtitle
+        >
+        <img
+          mat-card-md-image
+          src="../../../assets/images/temp_qrcode.png"
+          alt="Member Id qrcode"
+        />
+      </mat-card-title-group>
+    </mat-card-header>
+    <mat-card-content>
+      <br />
+    </mat-card-content>
+  </mat-card>
+</div>

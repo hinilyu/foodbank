@@ -1,1 +1,29 @@
-<p>faq works!</p>
+<div class="flex justify-center items-center font-title">
+    <cdk-accordion class="example-accordion">
+    <ng-container *ngFor="let item of items; let index = index">
+        <cdk-accordion-item  
+        #accordionItem="cdkAccordionItem"
+        class="example-accordion-item"
+        role="button"
+        tabindex="0"
+        [attr.id]="'accordion-header-' + index"
+        [attr.aria-expanded]="accordionItem.expanded"
+        [attr.aria-controls]="'accordion-body-' + index">
+        <div class="example-accordion-item-header" (click)="accordionItem.toggle()">
+          {{ item }}
+          <span class="example-accordion-item-description">
+            Click to {{ accordionItem.expanded ? 'close' : 'open' }}
+          </span>
+        </div>
+        <div
+          class="example-accordion-item-body"
+          role="region"
+          [style.display]="accordionItem.expanded ? '' : 'none'"
+          [attr.id]="'accordion-body-' + index"
+          [attr.aria-labelledby]="'accordion-header-' + index">
+          {{answers[index]}}
+        </div>
+      </cdk-accordion-item>
+      </ng-container>
+      </cdk-accordion>
+      </div>

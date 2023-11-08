@@ -1,10 +1,40 @@
-<app-needhelp-map></app-needhelp-map>
 <div
   class="flex flex-col mx-14 h-[80vh] items-center justify-center bg-gradient-to-r from-cyan-100 to-green-50 rounded-full"
 >
-  <button
-    class="hover:bg-orange text-white text-xl font-bold p-5 rounded-full bg-sunshine"
-  >
-    Dorset Park Community Hub
-  </button>
+  <mat-button-toggle-group #group="matButtonToggleGroup" class="mb-10">
+    <mat-button-toggle
+      (click)="selectView = 'list'"
+      aria-label="List View"
+      class="w-40"
+    >
+      <mat-icon>menu</mat-icon>
+    </mat-button-toggle>
+    <mat-button-toggle
+      (click)="selectView = 'map'"
+      aria-label="Map View"
+      class="w-40"
+    >
+      <mat-icon>map</mat-icon>
+    </mat-button-toggle>
+  </mat-button-toggle-group>
+
+  <p class="font-body text-lg text-storm">
+    Showing nearest location based on your postal code
+  </p>
+  <div
+    id="map"
+    class="w-2/3 h-2/3 lg:w-[600px] lg:h-[600px]"
+    [hidden]="selectView == 'list'"
+  ></div>
+  <div [hidden]="selectView == 'map'">
+    <div *ngFor="let location of locations">
+      <a [routerLink]="['/location', location.title]" class="info-block">
+        <h3>{{ location.title }}</h3>
+        <p><strong>Opening Hours:</strong> {{ location.openingHours }}</p>
+        <p><strong>Address:</strong> {{ location.address }}</p>
+        <p><strong>Telephone:</strong> {{ location.telephone }}</p>
+      </a>
+      <!-- You can include additional details as needed -->
+    </div>
+  </div>
 </div>

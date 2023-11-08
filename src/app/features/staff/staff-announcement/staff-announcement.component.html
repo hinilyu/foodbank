@@ -1,3 +1,127 @@
+<div class="flex justify-center items-center font-title w-screen">
+  <div
+    class="flex flex-col xl:max-w-[50vw] w-[80vw] justify-center p-10 border-4 border-storm rounded-md"
+  >
+    <div class="font-title text-5xl mb-10 text-center">What's new?</div>
+    <form
+      #announcementForm="ngForm"
+      (ngSubmit)="postAnnouncement(announcementForm.value)"
+      class="flex flex-col"
+    >
+      <mat-form-field class="">
+        <mat-label>Topic</mat-label>
+        <input
+          matInput
+          placeholder="Enter the topic"
+          name="topic"
+          [(ngModel)]="announcement.topic"
+          required
+        />
+      </mat-form-field>
+      <mat-form-field class="">
+        <mat-label>Type</mat-label>
+        <mat-select name="type" [(ngModel)]="announcement.type" required>
+          <mat-option value="internal">Internal</mat-option>
+          <mat-option value="public">Public</mat-option>
+        </mat-select>
+      </mat-form-field>
+      <mat-form-field class="">
+        <mat-label>Content</mat-label>
+        <textarea
+          matInput
+          placeholder="Enter the content"
+          name="content"
+          [(ngModel)]="announcement.content"
+          required
+        ></textarea>
+      </mat-form-field>
+
+      <div class="flex justify-center">
+        <button
+          type="submit"
+          class="btn hover:bg-deep-royal text-white text-lg font-bold px-5 py-3 m-5 rounded-full bg-storm w-[50%]">
+          Post
+        </button>
+      </div>
+    </form>
+  </div>
+</div>
+<hr />
+<div class="flex justify-center w-screen text-center font-title mt-40">
+  <p class="text-5xl">Around Scarborough</p>
+</div>
+<div class="grid lg:grid-cols-3 w-screen p-20">
+  <div
+    *ngFor="let announcement of announcements; let i = index"
+    class="m-10 max-h-80 w-[90%]"
+  >
+    <mat-card class="p-10">
+      <mat-card-title>{{ announcement.topic }}</mat-card-title>
+      <p>myself</p>
+      <div
+        class="mt-6 border border-sunshine rounded-md overflow-auto h-40 px-5 py-2"
+      >
+        {{ announcement.content }}
+      </div>
+      <!-- <mat-card-actions> -->
+        <div style ="position: absolute; top: 0; right: 0; padding-top: 20px; padding-right: 15px;">
+        <button mat-button (click)="editAnnouncement(i)">Edit</button>
+        <button mat-button color="warn" (click)="deleteAnnouncement(i)">
+          Delete
+        </button>
+      </div>
+      <!-- </mat-card-actions> -->
+    </mat-card>
+  </div>
+  <!-- demo -->
+  <div class="m-10 h-80 w-[90%]">
+    <mat-card class="p-10">
+      <mat-card-title>Cabbage expires soon</mat-card-title>
+      <p>Centennial College</p>
+      <div
+        class="mt-6 border border-sunshine rounded-md overflow-auto h-40 px-5 py-2"
+      >
+        Please come to pick up before Nov 12
+      </div>
+    </mat-card>
+  </div>
+  <div class="m-10 h-80 w-[90%]">
+    <mat-card class="p-10">
+      <mat-card-title>Cabbage expires soon</mat-card-title>
+      <p>Centennial College</p>
+      <div
+        class="mt-6 border border-sunshine rounded-md overflow-auto h-40 px-5 py-2"
+      >
+        Please come to pick up before Nov 12
+      </div>
+    </mat-card>
+  </div>
+  <div class="m-10 h-80 w-[90%]">
+    <mat-card class="p-10">
+      <mat-card-title>Cabbage expires soon</mat-card-title>
+      <p>Centennial College</p>
+      <div
+        class="mt-6 border border-sunshine rounded-md overflow-auto h-40 px-5 py-2"
+      >
+        Please come to pick up before Nov 12
+      </div>
+    </mat-card>
+  </div>
+  <div class="m-10 h-80 w-[90%]">
+    <mat-card class="p-10">
+      <mat-card-title>Cabbage expires soon</mat-card-title>
+      <p>Centennial College</p>
+      <div
+        class="mt-6 border border-sunshine rounded-md overflow-auto h-40 px-5 py-2"
+      >
+        Please come to pick up before Nov 12
+      </div>
+    </mat-card>
+  </div>
+
+  <!-- demo -->
+</div>
+
 <!-- <mat-card>
   <mat-card-content>
     <mat-form-field appearance="fill">
@@ -46,29 +170,6 @@
   </form>
 </mat-card> -->
 
-<mat-card>
-  <form #announcementForm="ngForm" (ngSubmit)="postAnnouncement(announcementForm.value)">
-    <mat-form-field>
-      <mat-label>Topic</mat-label>
-      <input matInput placeholder="Enter the topic" name="topic" [(ngModel)]="announcement.topic" required>
-    </mat-form-field>
-    <mat-form-field>
-      <mat-label>Type</mat-label>
-      <mat-select name="type" [(ngModel)]="announcement.type" required>
-        <mat-option value="internal">Internal</mat-option>
-        <mat-option value="public">Public</mat-option>
-      </mat-select>
-    </mat-form-field>
-    <br>
-    <mat-form-field>
-      <mat-label>Content</mat-label>
-      <textarea matInput placeholder="Enter the content" name="content" [(ngModel)]="announcement.content" required></textarea>
-    </mat-form-field>
-    <br>
-    <button mat-button type="submit">Post</button>
-  </form>
-</mat-card>
-
 <!-- Display posted announcements here -->
 <!-- <div *ngFor="let announcement of announcements">
   <mat-card>
@@ -76,13 +177,3 @@
     <mat-card-content>{{ announcement.content }}</mat-card-content>
   </mat-card>
 </div> -->
-<div *ngFor="let announcement of announcements; let i = index">
-  <mat-card>
-    <mat-card-title>{{ announcement.topic }}</mat-card-title>
-    <mat-card-content>{{ announcement.content }}</mat-card-content>
-    <mat-card-actions>
-      <button mat-button (click)="editAnnouncement(i)">Edit</button>
-      <button mat-button color="warn" (click)="deleteAnnouncement(i)">Delete</button>
-    </mat-card-actions>
-  </mat-card>
-</div>

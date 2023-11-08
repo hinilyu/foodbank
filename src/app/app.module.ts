@@ -24,6 +24,11 @@ import { NeedhelpDetailComponent } from './features/needhelp/needhelp-detail/nee
 import { NeedhelpMapComponent } from './features/needhelp/needhelp-map/needhelp-map.component';
 import {ChatComponent} from './components/chat/chat.component';
 import { ChatService } from './service/chat.service';
+import { NeedhelpListComponent } from './features/needhelp/needhelp-list/needhelp-list.component';
+import { ProfilePageComponent } from './pages/profile-page/profile-page.component';
+
+import {CdkAccordionModule} from '@angular/cdk/accordion';
+
 //Material Module
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatToolbarModule } from '@angular/material/toolbar';
@@ -41,9 +46,10 @@ import { MatSelectModule } from '@angular/material/select';
 import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 import { MatRadioModule } from '@angular/material/radio';
 import { MatDividerModule } from '@angular/material/divider';
-import { NeedhelpListComponent } from './features/needhelp/needhelp-list/needhelp-list.component';
-
+import { MatButtonToggleModule } from '@angular/material/button-toggle';
 import { MatSnackBarModule } from '@angular/material/snack-bar';
+import { ChatbotComponent } from './components/chatbot/chatbot.component';
+
 
 
 @NgModule({
@@ -66,6 +72,8 @@ import { MatSnackBarModule } from '@angular/material/snack-bar';
     NeedhelpListComponent,
     BookingDetailComponent,
     ChatComponent
+    ProfilePageComponent,
+    ChatbotComponent,
   ],
   imports: [
     BrowserModule,
@@ -89,6 +97,8 @@ import { MatSnackBarModule } from '@angular/material/snack-bar';
     MatRadioModule,
     MatCardModule,
     MatDividerModule,
+    MatButtonToggleModule,
+    CdkAccordionModule
   ],
   providers: [ChatService],
   bootstrap: [AppComponent],
