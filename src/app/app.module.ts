@@ -31,6 +31,7 @@ import { MatGridListModule } from '@angular/material/grid-list';
 import { MatSelectModule } from '@angular/material/select';
 import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 import { MatRadioModule } from '@angular/material/radio';
+import { MatDividerModule } from '@angular/material/divider';
 
 @NgModule({
   declarations: [
@@ -65,6 +66,7 @@ import { MatRadioModule } from '@angular/material/radio';
     FormsModule,
     MatRadioModule,
     MatCardModule,
+    MatDividerModule,
   ],
   providers: [],
   bootstrap: [AppComponent],

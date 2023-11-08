@@ -13,3 +13,7 @@
     height: 150px;
   }
 }
+
+.mat-mdc-menu-panel.mat-mdc-menu-panel {
+  min-width: 500px !important;
+}
