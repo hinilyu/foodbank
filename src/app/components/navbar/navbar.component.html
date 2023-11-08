@@ -2,24 +2,25 @@
   <!-- Logo -->
   <a
     routerLink="home"
-    class="md:ml-20 sm:ml-8 sm:block hidden lg:text-5xl md:text-4xl text-3xl my-5 font-title font-bold"
+    class="md:ml-14 sm:ml-8 sm:block hidden lg:text-5xl md:text-4xl text-3xl my-5 font-extrabold font-title hover:border border-orange rounded p-2"
     >Scarborough Food Network</a
   >
   <a
     routerLink="home"
-    class="md:ml-20 sm:ml-8 ml-5 sm:hidden block my-5 font-title font-bold w-14"
+    class="md:ml-20 ml-12 sm:hidden block my-5 font-title font-bold w-14"
     ><img src="assets/logos/icon-bw.png"
   /></a>
   <!-- Menu button -->
   <button
-    mat-icon-button
     [matMenuTriggerFor]="menu"
-    class="lg:mr-20 md:mr-8 mr-5"
+    class="lg:mr-20 md:mr-14 mr-12 text-3xl menu"
+    (mouseenter)="menuButton = hover"
+    (mouseleave)="menuButton = normal"
   >
-    Menu
+    <i class="{{ menuButton }}"></i>
   </button>
   <!-- Menu -->
-  <mat-menu #menu="matMenu" class="font-title">
+  <mat-menu #menu="matMenu" class="font-title menu">
     <!-- header -->
     <div class="p-3 divide-y divide-solid">
       <!-- button -->
@@ -37,20 +38,23 @@
       <div class="pt-3 flex flex-col justify-center">
         <button
           routerLink="needhelp"
-          class="bg-orange font-bold text-white py-3 hover:bg-sunshine"
+          class="bg-orange font-bold text-white py-3 hover:bg-sunshine rounded"
         >
           Looking for food
         </button>
         <button
           routerLink="canhelp"
-          class="bg-orange hover:bg-sunshine font-bold text-white py-3 my-5"
+          class="bg-orange hover:bg-sunshine font-bold text-white py-3 my-5 rounded"
         >
           Trying to help
         </button>
       </div>
 
       <div class="pt-3 flex flex-col justify-center">
-        <button routerLink="faq" class="bg-slate-400 text-white p-3 my-5">
+        <button
+          routerLink="faq"
+          class="bg-slate-200 rounded-md text-black p-3 my-5 hover:bg-slate-300"
+        >
           Got Questions?
         </button>
       </div>

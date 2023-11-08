@@ -1,10 +1,10 @@
 <div class="flex justify-center">
-  <mat-card class="w-[500px]">
+  <mat-card class="md:w-[500px] w-screen mx-20">
     <mat-card-header>
       <mat-card-title>Sign Up</mat-card-title>
     </mat-card-header>
     <mat-card-content>
-      <form [formGroup]="signup">
+      <form [formGroup]="signup" class="m-5">
         <mat-form-field>
           <mat-label>Email</mat-label>
           <input matInput formControlName="email" required />
