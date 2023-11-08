@@ -1,5 +1,12 @@
 import { Component } from '@angular/core';
-import {Html5QrcodeScanner, Html5Qrcode} from "html5-qrcode";
+import { Html5QrcodeScanner } from "html5-qrcode";
+import { MatSnackBar } from '@angular/material/snack-bar';
+
+interface Announcement {
+  topic: string;
+  type: string;
+  content: string;
+}
 
 @Component({
   selector: 'app-staff-scan',
@@ -7,7 +14,25 @@ import {Html5QrcodeScanner, Html5Qrcode} from "html5-qrcode";
   styleUrls: ['./staff-scan.component.css']
 })
 export class StaffScanComponent {
-  
+
+  constructor(private _snackBar: MatSnackBar){}
+
+  announcement:Announcement = {
+    topic: '',
+    type: '',  // Assuming 'internal' or 'public'
+    content: ''
+  };
+ 
+  postAnnouncement() {
+    this.showNotification('User checked-in');
+  }
+
+  showNotification(message: string) {
+     this._snackBar.open(message, 'Close', {
+       duration: 2000,
+     });
+   }
+
 }
 let html5QrcodeScanner: Html5QrcodeScanner;
 
@@ -40,3 +65,5 @@ window.onload = function () {
     /* verbose= */ false);
   html5QrcodeScanner.render(onScanSuccess, onScanFailure);
 };
+
+
