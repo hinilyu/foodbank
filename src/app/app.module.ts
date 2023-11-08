@@ -42,6 +42,7 @@ import { MatDividerModule } from '@angular/material/divider';
 import { NeedhelpListComponent } from './features/needhelp/needhelp-list/needhelp-list.component';
 
 import { MatSnackBarModule } from '@angular/material/snack-bar';
+import { ProfilePageComponent } from './pages/profile-page/profile-page.component';
 
 @NgModule({
   declarations: [
@@ -62,6 +63,7 @@ import { MatSnackBarModule } from '@angular/material/snack-bar';
     NeedhelpMapComponent,
     NeedhelpListComponent,
     BookingDetailComponent,
+    ProfilePageComponent,
   ],
   imports: [
     BrowserModule,
