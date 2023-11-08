@@ -22,12 +22,12 @@ import { BookingDetailComponent } from './pages/booking-detail/booking-detail.co
 import { BookingPageComponent } from './features/needhelp/booking-page/booking-page.component';
 import { NeedhelpDetailComponent } from './features/needhelp/needhelp-detail/needhelp-detail.component';
 import { NeedhelpMapComponent } from './features/needhelp/needhelp-map/needhelp-map.component';
-import {ChatComponent} from './components/chat/chat.component';
+import { ChatComponent } from './components/chat/chat.component';
 import { ChatService } from './service/chat.service';
 import { NeedhelpListComponent } from './features/needhelp/needhelp-list/needhelp-list.component';
 import { ProfilePageComponent } from './pages/profile-page/profile-page.component';
 
-import {CdkAccordionModule} from '@angular/cdk/accordion';
+import { CdkAccordionModule } from '@angular/cdk/accordion';
 
 //Material Module
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
@@ -50,8 +50,6 @@ import { MatButtonToggleModule } from '@angular/material/button-toggle';
 import { MatSnackBarModule } from '@angular/material/snack-bar';
 import { ChatbotComponent } from './components/chatbot/chatbot.component';
 
-
-
 @NgModule({
   declarations: [
     AppComponent,
@@ -71,7 +69,7 @@ import { ChatbotComponent } from './components/chatbot/chatbot.component';
     NeedhelpMapComponent,
     NeedhelpListComponent,
     BookingDetailComponent,
-    ChatComponent
+    ChatComponent,
     ProfilePageComponent,
     ChatbotComponent,
   ],
@@ -98,7 +96,7 @@ import { ChatbotComponent } from './components/chatbot/chatbot.component';
     MatCardModule,
     MatDividerModule,
     MatButtonToggleModule,
-    CdkAccordionModule
+    CdkAccordionModule,
   ],
   providers: [ChatService],
   bootstrap: [AppComponent],

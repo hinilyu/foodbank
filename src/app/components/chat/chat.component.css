@@ -1,87 +1,85 @@
 .chatbot-container {
-    position: fixed;
-    bottom: 20px; /* Adjust this value as needed */
-    right: 20px; /* Adjust this value as needed */
-    z-index: 1000; /* Adjust the z-index as needed to ensure it appears above other content */
-    width: 300px; /* Set a fixed width for the chatbot container */
-    /* Add any other necessary styles for the container */
-  }
-
-  .message {
-    max-width: 70%; /* Adjust the maximum width as needed */
-    word-wrap: break-word; /* Allow words to break to the next line */
-    overflow-x: auto; /* Add horizontal scroll for long messages */
-    /* Your existing styles for the message container */
-  }
-
-  .chatbot-button button {
-    background-color: #007bff; /* Change to your preferred background color */
-    color: #fff; /* Text color */
-    border: none;
-    padding: 10px 20px;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-    position: fixed;
-    bottom: 0;
-    right: 0;
-  }
-
-  .chatbot-message {
-    position: relative; /* Change the position to relative */
-    margin-bottom: 50px; /* Adjust the margin to create space for the button */
-    /* Your existing styles for chatbot-message */
-  }
-  
-  .chatbot-button button:hover {
-    background-color: #0056b3; /* Change to the hover color you prefer */
-  }
-  
-.sendButton button{
-    background-color: #007bff; /* Change to your preferred background color */
-    color: #fff; /* Text color */
-    border: none;
-    padding: 10px 20px;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;  
+  position: fixed;
+  bottom: 20px; /* Adjust this value as needed */
+  right: 20px; /* Adjust this value as needed */
+  z-index: 1000; /* Adjust the z-index as needed to ensure it appears above other content */
+  width: 300px; /* Set a fixed width for the chatbot container */
+  /* Add any other necessary styles for the container */
 }
 
-  .message {
-    margin: 5px;
-    padding: 10px;
-    border-radius: 5px;
-  }
-  
-  .message.from {
-    background-color: #f0f0f0; /* Background color for bot messages */
-  }
-  
-  .message.to {
-    background-color: #e7ebfd; /* Background color for user messages */
-  }
-  
+.message {
+  max-width: 70%; /* Adjust the maximum width as needed */
+  word-wrap: break-word; /* Allow words to break to the next line */
+  overflow-x: auto; /* Add horizontal scroll for long messages */
+  /* Your existing styles for the message container */
+}
 
-  input[type="text"] {
-    width: 70%;
-    padding: 5px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    margin-top: 5px;
-  }
-  
-  button[type="submit"] {
-    background-color: #007bff;
-    color: #fff;
-    border: none;
-    padding: 10px 20px;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-  }
-  
-  button[type="submit"]:hover {
-    background-color: #0056b3;
-  }
+.chatbot-button button {
+  background-color: #007bff; /* Change to your preferred background color */
+  color: #fff; /* Text color */
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  position: fixed;
+  bottom: 5%;
+  right: 5%;
+}
 
-  
+.chatbot-message {
+  position: relative; /* Change the position to relative */
+  margin-bottom: 10vh; /* Adjust the margin to create space for the button */
+  /* Your existing styles for chatbot-message */
+}
+
+.chatbot-button button:hover {
+  background-color: #0056b3; /* Change to the hover color you prefer */
+}
+
+.sendButton button {
+  background-color: #007bff; /* Change to your preferred background color */
+  color: #fff; /* Text color */
+  border: none;
+  padding: 10px 20px;
+  margin: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.message {
+  margin: 5px;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+.message.from {
+  background-color: #f0f0f0; /* Background color for bot messages */
+}
+
+.message.to {
+  background-color: #e7ebfd; /* Background color for user messages */
+}
+
+input[type="text"] {
+  width: 70%;
+  padding: 5px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  margin-top: 5px;
+}
+
+button[type="submit"] {
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button[type="submit"]:hover {
+  background-color: #0056b3;
+}
