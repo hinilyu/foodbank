@@ -1,20 +1,76 @@
-<mat-card class="example-card" *ngIf="currentBank">
-  <mat-card-header>
-    <div mat-card-avatar class="example-header-image"></div>
-    <mat-card-title>{{ currentBank?.title }}</mat-card-title> <!-- Safe navigation operator used here -->
-  </mat-card-header>
-  <img mat-card-image [src]="currentBank?.imagelink" alt="Photo of food bank" /> <!-- Safe navigation operator used here -->
-  <mat-card-content>
-    <p><strong>Opening Hours:</strong> {{ currentBank?.openingHours }}</p> <!-- Safe navigation operator used here -->
-    <p><strong>Address:</strong> {{ currentBank?.address }}</p> <!-- Safe navigation operator used here -->
-    <p><strong>Telephone:</strong> {{ currentBank?.telephone }}</p> <!-- Safe navigation operator used here -->
-  </mat-card-content>
-</mat-card>
+<!-- <div class="p-20">
+  <mat-card class="example-card">
+    <mat-card-header>
+      <div mat-card-avatar class="example-header-image"></div>
+      <mat-card-title>{{ currentBank.title }}</mat-card-title>
+    </mat-card-header>
+    <img
+      mat-card-image
+      src="{{ currentBank.imagelink }}"
+      alt="Photo of food bank"
+      class="w-[50%]"
+    />
+    <mat-card-content>
+      <p><strong>Opening Hours:</strong> {{ currentBank.openingHours }}</p>
+      <p><strong>Address:</strong> {{ currentBank.address }}</p>
+      <p><strong>Telephone:</strong> {{ currentBank.telephone }}</p>
+    </mat-card-content>
+    <mat-card-actions>
+      <button mat-button>Book</button>
+      <button mat-button>Details</button>
+    </mat-card-actions>
+  </mat-card>
+</div> -->
 
-
-<button
-  routerLink="/needhelp/booking"
-  class="hover:bg-orange text-white lg:text-7xl text-xl font-bold py-8 px-24 rounded-full bg-sunshine"
+<div
+  class="flex flex-wrap justify-evenly m-10 p-10 border-2 shadow-md rounded-sm"
 >
-  Schedule a booking
-</button>
+  <div class="p-3 basis-full font-body lg:text-4xl text-2xl font-black mb-10">
+    {{ currentBank.title }}
+  </div>
+  <div class="">
+    <img
+      mat-card-image
+      src="{{ currentBank.imagelink }}"
+      alt="Photo of food bank"
+      class="max-w-xl w-[100%]"
+    />
+  </div>
+  <div class="p-10 md:text-lg">
+    <p><strong>Opening Hours:</strong> {{ currentBank.openingHours }}</p>
+    <p><strong>Address:</strong> {{ currentBank.address }}</p>
+    <p><strong>Telephone:</strong> {{ currentBank.telephone }}</p>
+    <mat-card class="mt-10">
+      <mat-card-header>
+        <mat-card-subtitle>Recent Update</mat-card-subtitle>
+        <mat-card-title>Milk not available</mat-card-title>
+      </mat-card-header>
+      <mat-card-content>
+        <p>@Rogue Park Food Bank</p>
+        <p>Not be able to provide milk this week.</p>
+        <mat-divider></mat-divider>
+      </mat-card-content>
+      <mat-card-actions>
+        <button mat-button>SHARE</button>
+      </mat-card-actions>
+    </mat-card>
+  </div>
+
+  <div
+    class="basis-full justify-center flex flex-row items-center align-middle"
+  >
+    <button
+      routerLink="/needhelp/booking"
+      class="hover:bg-orange text-white lg:text-xl font-bold px-5 py-3 rounded-full bg-sunshine mt-20 mx-10"
+    >
+      Schedule a booking
+    </button>
+    <button
+      routerLink="/needhelp"
+      class="hover:border-transparent hover:bg-sunshine text-sunshine hover:text-white lg:text-xl font-bold px-5 py-3 mx-10 rounded-full bg-transparent border border-sunshine mt-20"
+    >
+      Back
+    </button>
+  </div>
+  <div></div>
+</div>

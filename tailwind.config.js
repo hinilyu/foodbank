@@ -13,6 +13,7 @@ module.exports = {
       },
       fontFamily: {
         title: ["Raleway", "Roboto", '"Open Sans"'],
+        body: ['"Poppins"', "Helvetica", '"Open Sans"'],
       },
     },
   },

@@ -1,4 +1,4 @@
-<div class="flex justify-evenly ...">
+<div class="flex justify-center md:mt-20 px-10">
   <form [formGroup]="userForm" (ngSubmit)="submitForm()">
     <mat-accordion class="example-headers-align">
       <mat-expansion-panel
@@ -93,9 +93,14 @@
           </mat-grid-list>
         </div>
 
-        <mat-action-row>
-          <button mat-button color="warn" (click)="prevStep()">Previous</button>
-        </mat-action-row>
+        <div class="flex justify-center">
+          <button
+            (click)="prevStep()"
+            class="hover:border-transparent hover:bg-sunshine text-sunshine hover:text-white lg:text-lg font-bold px-5 py-3 mx-10 rounded-full bg-transparent border border-sunshine mt-20"
+          >
+            Previous
+          </button>
+        </div>
       </mat-expansion-panel>
 
       <mat-expansion-panel
@@ -115,12 +120,12 @@
           <div class="grid grid-cols-2 gap-4">
             <mat-form-field>
               <mat-label>First name</mat-label>
-              <input matInput formControlName="firstName"/>
+              <input matInput formControlName="firstName" />
             </mat-form-field>
 
             <mat-form-field>
               <mat-label>Last name</mat-label>
-              <input matInput formControlName="lastName"/>
+              <input matInput formControlName="lastName" />
             </mat-form-field>
 
             <mat-form-field>
@@ -185,11 +190,30 @@
           </div>
         </div>
 
-        <mat-action-row>
-          <button mat-button color="warn" (click)="prevStep()">Previous</button>
-          <button mat-button color="primary" type="submit">Submit</button>
-        </mat-action-row>
+        <div class="flex justify-center">
+          <button
+            type="submit"
+            class="hover:bg-orange text-white lg:text-lg font-bold px-5 py-3 rounded-full bg-sunshine mt-20 mx-10"
+          >
+            Submit
+          </button>
+          <button
+            (click)="prevStep()"
+            class="hover:border-transparent hover:bg-sunshine text-sunshine hover:text-white lg:text-lg font-bold px-5 py-3 mx-10 rounded-full bg-transparent border border-sunshine mt-20"
+          >
+            Previous
+          </button>
+        </div>
       </mat-expansion-panel>
     </mat-accordion>
   </form>
+</div>
+
+<div class="flex justify-center">
+  <button
+    routerLink="/needhelp/detail"
+    class="hover:border-transparent hover:bg-sunshine text-sunshine hover:text-white lg:text-lg font-bold px-5 py-3 mx-10 rounded-full bg-transparent border border-sunshine mt-20"
+  >
+    Back
+  </button>
 </div>
