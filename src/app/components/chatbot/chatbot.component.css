@@ -1,0 +1,29 @@
+.chatbot-container {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 1000; /* Adjust z-index as needed */
+  }
+  
+  .chatbot-logo {
+    width: 50px; /* Adjust size as needed */
+    height: 50px; /* Adjust size as needed */
+    cursor: pointer;
+  }
+  
+  .popup-image {
+    display: none;
+    position: absolute;
+    bottom: 150px; /* Move the pop-up box higher */
+    right: 0;
+    width: 300px; /* Adjust width to make the box larger */
+    height: 250px; /* Adjust height to make the box larger */
+    border: 1px solid #ccc; /* Example border style */
+    background-color: #fff; /* Example background color */
+    z-index: 1100; /* Adjust z-index to appear above chatbot icon */
+  }
+  
+  .popup-image.show-popup {
+    display: block;
+  }
+  
